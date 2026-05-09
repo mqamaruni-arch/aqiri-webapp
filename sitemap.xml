@@ -1,59 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://alqamarinstitute.org/</loc>
+    <loc>https://aqiri.org/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://alqamarinstitute.org/departments/quranic-studies.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alqamarinstitute.org/departments/hadith-sunnah.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alqamarinstitute.org/departments/seerah-civilization.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alqamarinstitute.org/departments/fiqh-islamic-law.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alqamarinstitute.org/departments/islamic-thought-history-culture.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alqamarinstitute.org/departments/comparative-religion-interfaith.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alqamarinstitute.org/departments/academic-publishing-research.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alqamarinstitute.org/administration/board-of-governors.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alqamarinstitute.org/administration/director-general.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alqamarinstitute.org/administration/chief-administrator.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alqamarinstitute.org/admissions/</loc>
+    <loc>https://aqiri.org/admissions/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://alqamarinstitute.org/careers.html</loc>
+    <loc>https://aqiri.org/careers.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alqamarinstitute.org/news.html</loc>
+    <loc>https://aqiri.org/news.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aqiri.org/departments/quranic-studies.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://aqiri.org/departments/hadith-sunnah.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://aqiri.org/departments/seerah-civilization.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://aqiri.org/departments/fiqh-islamic-law.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://aqiri.org/departments/islamic-thought-history-culture.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://aqiri.org/departments/comparative-religion-interfaith.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://aqiri.org/departments/academic-publishing-research.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://aqiri.org/administration/board-of-governors.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aqiri.org/administration/director-general.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aqiri.org/administration/chief-administrator.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

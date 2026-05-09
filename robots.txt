@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alqamarinstitute.org/sitemap.xml
+Sitemap: https://aqiri.org/sitemap.xml
