@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Keep one canonical host for Google and visitors.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.aqiri\.org$ [NC]
+RewriteRule ^(.*)$ https://aqiri.org/$1 [R=301,L]
+
