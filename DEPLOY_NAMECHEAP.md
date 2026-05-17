@@ -18,6 +18,15 @@ Add these secrets in your GitHub repository:
 - `NAMECHEAP_FTP_PASSWORD`
 - `NAMECHEAP_FTP_DIR`
 
+For `aqiri.org`, DNS currently serves the site from:
+
+```text
+premium325-1.web-hosting.com
+67.223.118.245
+```
+
+If the live site shows the Namecheap default page while GitHub Actions says the FTP deploy succeeded, the GitHub secrets are pointing to the wrong hosting account or folder. Update the secrets so the FTP account logs in to the same Namecheap hosting server that serves `aqiri.org`.
+
 For most Namecheap shared hosting accounts, `NAMECHEAP_FTP_DIR` is similar to:
 
 ```text
