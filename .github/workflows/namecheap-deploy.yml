@@ -18,11 +18,11 @@ jobs:
       - name: Deploy files by FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.NAMECHEAP_FTP_SERVER }}
+          server: premium325-1.web-hosting.com
           username: ${{ secrets.NAMECHEAP_FTP_USERNAME }}
           password: ${{ secrets.NAMECHEAP_FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /aqiri.org/
+          server-dir: /public_html/
           timeout: 120000
           exclude: |
             **/.git*
