@@ -23,6 +23,7 @@ jobs:
           password: ${{ secrets.NAMECHEAP_FTP_PASSWORD }}
           local-dir: ./
           server-dir: ./
+          state-name: .ftp-deploy-live-root-state.json
           timeout: 120000
           exclude: |
             **/.git*
