@@ -890,7 +890,7 @@
         padding: 3.2rem 1rem;
       }
     }
-  </style>
+  .menu-toggle::before{content:"";display:block;width:22px;height:16px;background:linear-gradient(var(--green-dark),var(--green-dark)) 0 0/100% 2px no-repeat,linear-gradient(var(--green-dark),var(--green-dark)) 0 50%/100% 2px no-repeat,linear-gradient(var(--green-dark),var(--green-dark)) 0 100%/100% 2px no-repeat}body.nav-open .menu-toggle::before{content:"X";width:auto;height:auto;background:none;font:800 1.35rem Arial,sans-serif;color:var(--green-dark)}</style>
 </head>
 <body>
   <div class="top-strip">
@@ -909,7 +909,7 @@
          
         </span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">?</button>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"></button>
       <nav aria-label="Primary navigation">
         <div class="nav-item">
           <button class="nav-trigger" type="button" aria-haspopup="true">About</button>
