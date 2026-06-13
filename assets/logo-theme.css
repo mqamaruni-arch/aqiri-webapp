@@ -1,0 +1,150 @@
+:root {
+  --blue: #e7f4ff;
+  --blue-deep: #3d217c;
+  --green: #078443;
+  --green-dark: #28115f;
+  --green-soft: #f0ebff;
+  --ink: #211a2e;
+  --muted: #665e73;
+  --paper: #f8f7fc;
+  --line: #d8d0e9;
+  --gold: #79c9f2;
+  --white: #ffffff;
+  --shadow: 0 18px 44px rgba(45, 18, 103, 0.14);
+}
+
+body {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.masthead {
+  background: rgba(250, 249, 253, 0.96);
+  border-bottom-color: var(--line);
+}
+
+h1,
+h2,
+h3,
+.brand-title,
+nav,
+nav a,
+.nav-trigger {
+  color: var(--green-dark);
+}
+
+nav a:hover,
+.nav-trigger:hover,
+.eyebrow,
+.profile span,
+.staff-card span,
+.faculty-role {
+  color: var(--green);
+}
+
+.page-hero,
+.hero:not([aria-label="Al-Qamar Islamic Research Institute"]) {
+  background:
+    radial-gradient(circle at 88% 18%, rgba(121, 201, 242, 0.32), transparent 28%),
+    linear-gradient(120deg, #f1ecff 0%, #edf9f1 58%, #e7f4ff 100%);
+}
+
+.button,
+.submit {
+  background: linear-gradient(135deg, #3d217c, #167aa8);
+  box-shadow: 0 12px 24px rgba(45, 18, 103, 0.2);
+}
+
+.button:hover,
+.button:focus-visible,
+.submit:hover,
+.submit:focus-visible {
+  box-shadow: 0 16px 30px rgba(45, 18, 103, 0.28);
+}
+
+.card,
+.profile {
+  border-top-color: var(--green-dark);
+  box-shadow: 0 10px 28px rgba(45, 18, 103, 0.08);
+}
+
+.tag,
+.faculty-role,
+.profile-meta small,
+.faculty-count,
+.course-list span,
+.mini-photo {
+  background: var(--green-soft);
+}
+
+.staff-member {
+  border-left-color: #79c9f2;
+  background: #fbfaff;
+}
+
+.course-meta,
+.staff-card,
+.note,
+input,
+select,
+textarea {
+  background: #fdfcff;
+}
+
+input,
+select,
+textarea {
+  border-color: #cfc4e4;
+}
+
+.dropdown a:hover {
+  background: var(--green-dark);
+}
+
+.note-grid div {
+  border-left-color: #79c9f2;
+}
+
+footer,
+.top-strip {
+  background: var(--green-dark);
+}
+
+.quick-links,
+.band {
+  background: var(--green-dark);
+}
+
+.band .card {
+  background: #382070;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.band .card h3,
+.band .card h4 {
+  color: #b9e4ff;
+}
+
+.link-row a:first-child,
+.vacancy-tabs span:first-child {
+  background: var(--blue-deep);
+  border-color: var(--blue-deep);
+}
+
+.link-row a:hover,
+.link-row a:focus-visible,
+.quick-links a:hover {
+  background: #167aa8;
+}
+
+.panel {
+  border-left-color: #79c9f2;
+}
+
+@media (max-width: 980px) {
+  nav,
+  .dropdown,
+  .nav-item .dropdown {
+    background: #fbfaff;
+  }
+}
