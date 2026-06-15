@@ -891,7 +891,6 @@
       }
     }
   .menu-toggle::before{content:"";display:block;width:22px;height:16px;background:linear-gradient(var(--green-dark),var(--green-dark)) 0 0/100% 2px no-repeat,linear-gradient(var(--green-dark),var(--green-dark)) 0 50%/100% 2px no-repeat,linear-gradient(var(--green-dark),var(--green-dark)) 0 100%/100% 2px no-repeat}body.nav-open .menu-toggle::before{content:"X";width:auto;height:auto;background:none;font:800 1.35rem Arial,sans-serif;color:var(--green-dark)}</style>
-  <link rel="stylesheet" href="assets/logo-theme.css">
 </head>
 <body>
   <div class="top-strip">
@@ -1563,7 +1562,7 @@
         <span>Since 2014 | Operated under Global Center for Research and Study, GCRS</span>
       </div>
       <div>
-        <span>Copyright © 2014-2026 Al-Qamar Islamic Research Institute. All rights reserved.</span>
+        <span>Copyright ï¿½ 2014-2026 Al-Qamar Islamic Research Institute. All rights reserved.</span>
         <span><a href="admissions/index.html">Admissions Portal</a> | <a href="careers.html">Careers Portal</a> | <a href="news.html">News & Announcements</a></span>
       </div>
     </div>
@@ -1575,7 +1574,7 @@
       menuToggle.addEventListener("click", () => {
         const isOpen = document.body.classList.toggle("nav-open");
         menuToggle.setAttribute("aria-expanded", String(isOpen));
-        menuToggle.textContent = isOpen ? "×" : "?";
+        menuToggle.textContent = isOpen ? "ï¿½" : "?";
       });
 
       document.querySelectorAll("nav a").forEach((link) => {
