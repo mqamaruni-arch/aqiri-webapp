@@ -479,7 +479,7 @@ body {
 }
 
 body::before {
-  content: "Al-Qamar Islamic Research Institute\A Website Under Maintenance\A We are updating the website and it will be back within 48 hours.\A Thank you for your patience.";
+  content: "Website Under Maintenance\A\A Our website is currently undergoing scheduled maintenance and updates to improve your browsing experience.\A\A We apologize for any inconvenience caused. The website is expected to be back online within 48 hours.\A\A Thank you for your patience and understanding.\A\A For questions, please contact technical@aqiri.org";
   display: block;
   max-width: 760px;
   padding: clamp(2rem, 6vw, 4rem);
