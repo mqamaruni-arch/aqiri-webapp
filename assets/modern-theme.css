@@ -32,16 +32,26 @@ body {
 }
 
 .masthead-inner {
-  padding-block: 0.85rem;
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  gap: clamp(1.1rem, 2.4vw, 2rem);
+  align-items: center;
+  padding-block: 0.75rem;
 }
 
 .brand {
-  gap: 0.85rem;
+  gap: 0;
+  width: fit-content;
+  min-width: auto;
 }
 
 .seal {
-  width: 76px;
+  width: 96px;
   filter: drop-shadow(0 8px 14px rgba(7, 61, 45, 0.15));
+}
+
+.brand-title,
+.brand-kicker {
+  display: none !important;
 }
 
 .brand-title {
@@ -56,15 +66,16 @@ body {
 }
 
 nav {
-  gap: 0;
+  gap: 0.12rem;
   align-self: stretch;
+  justify-content: flex-end;
 }
 
 nav a,
 .nav-trigger {
   min-height: 42px;
   padding: 0.55rem 0.78rem;
-  color: var(--green-dark);
+  color: var(--green-dark) !important;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   font-weight: 700;
@@ -75,7 +86,7 @@ nav a:hover,
 .nav-trigger:hover,
 nav a:focus-visible,
 .nav-trigger:focus-visible {
-  color: #fff;
+  color: #fff !important;
   background: var(--green);
   border-color: rgba(255, 255, 255, 0.2);
 }
@@ -90,12 +101,12 @@ nav a:focus-visible,
 }
 
 .dropdown a {
-  color: var(--green-dark);
+  color: var(--green-dark) !important;
   border-radius: 0;
 }
 
 .dropdown a:hover {
-  color: #fff;
+  color: #fff !important;
   background: var(--green);
 }
 
@@ -213,9 +224,9 @@ nav a:focus-visible,
 }
 
 .button.secondary {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.72);
-  background: rgba(255, 255, 255, 0.12);
+  color: var(--green-dark);
+  border-color: rgba(15, 96, 71, 0.32);
+  background: #fff;
 }
 
 .button:hover,
@@ -363,6 +374,51 @@ p {
   border-color: rgba(255, 255, 255, 0.22);
 }
 
+#publications.band {
+  background: #f4f7f6;
+  color: var(--ink);
+}
+
+#publications.band h2,
+#publications.band h3,
+#publications.band h4,
+#publications.band p,
+#publications.band li,
+#publications.band dt,
+#publications.band dd,
+#publications.band .section-header p {
+  color: var(--ink);
+}
+
+#publications.band h3,
+#publications.band h4 {
+  color: var(--green-dark);
+}
+
+#publications.band .card {
+  background: #fff;
+  border-color: var(--line);
+  box-shadow: 0 10px 26px rgba(7, 61, 45, 0.08);
+}
+
+#publications.band .journal-meta {
+  border-color: var(--line);
+  background: var(--green-soft);
+}
+
+#publications.band .link-row a {
+  background: var(--green);
+  border-color: var(--green);
+  border-left-color: var(--gold);
+  color: #fff;
+}
+
+#publications.band .link-row a:hover,
+#publications.band .link-row a:focus-visible {
+  background: #fff;
+  color: var(--green-dark);
+}
+
 .publications-layout {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -458,6 +514,14 @@ footer {
 }
 
 @media (max-width: 980px) {
+  .masthead-inner {
+    grid-template-columns: 1fr auto !important;
+  }
+
+  .brand {
+    justify-self: start;
+  }
+
   .masthead {
     background: #fff;
   }
@@ -478,7 +542,7 @@ footer {
   }
 
   .seal {
-    width: 66px;
+    width: 78px;
   }
 }
 
