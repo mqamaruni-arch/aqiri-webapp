@@ -113,6 +113,8 @@ nav a:focus-visible,
   background-image:
     linear-gradient(90deg, rgba(7, 61, 45, 0.9) 0%, rgba(7, 61, 45, 0.72) 42%, rgba(0, 101, 139, 0.32) 100%),
     url("al-qamar-library-hero.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .page-hero {
