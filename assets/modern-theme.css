@@ -26,18 +26,22 @@ body {
 
 .masthead {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(231, 245, 239, 0.94)),
+    radial-gradient(circle at 8% 50%, rgba(197, 154, 67, 0.18), transparent 14rem),
+    radial-gradient(circle at 92% 0%, rgba(0, 101, 139, 0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(247, 252, 250, 0.98), rgba(220, 240, 232, 0.96)),
     var(--green-soft);
-  border-top: 5px solid var(--green-dark);
-  border-bottom: 1px solid var(--line);
-  box-shadow: 0 6px 20px rgba(7, 61, 45, 0.1);
+  border-top: 4px solid var(--gold);
+  border-bottom: 1px solid rgba(15, 96, 71, 0.18);
+  box-shadow: 0 8px 26px rgba(7, 61, 45, 0.12);
 }
 
 .masthead-inner {
-  grid-template-columns: auto minmax(0, 1fr) !important;
-  gap: clamp(0.7rem, 1.4vw, 1.15rem);
+  display: flex !important;
+  justify-content: center;
+  grid-template-columns: none !important;
+  gap: clamp(0.9rem, 1.7vw, 1.35rem);
   align-items: center;
-  padding-block: 0.75rem;
+  padding-block: 0.68rem;
 }
 
 .brand {
@@ -72,7 +76,7 @@ nav {
   gap: 0.12rem;
   align-self: center;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 nav a,
@@ -521,6 +525,7 @@ footer {
 
 @media (max-width: 980px) {
   .masthead-inner {
+    display: grid !important;
     grid-template-columns: 1fr auto !important;
   }
 
