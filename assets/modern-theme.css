@@ -243,6 +243,35 @@ nav a:focus-visible,
   background: rgba(255, 255, 255, 0.12);
 }
 
+.hero-actions .button {
+  min-height: 48px;
+  padding: 0.78rem 1.08rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-left: 5px solid var(--gold);
+  background: linear-gradient(135deg, var(--green), var(--blue-deep));
+  color: #fff !important;
+  box-shadow: 0 12px 24px rgba(7, 61, 45, 0.18);
+}
+
+.hero-actions .button:hover,
+.hero-actions .button:focus-visible {
+  background: #fff;
+  color: var(--green-dark) !important;
+  border-color: rgba(15, 96, 71, 0.25);
+  border-left-color: var(--gold);
+}
+
+.hero-actions .button.secondary {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff !important;
+}
+
+.hero-actions .button.secondary:hover,
+.hero-actions .button.secondary:focus-visible {
+  background: #fff;
+  color: var(--green-dark) !important;
+}
+
 .button:hover,
 .button:focus-visible,
 .submit:hover,
@@ -468,6 +497,29 @@ p {
 #publications.band .link-row a:focus-visible {
   background: #fff;
   color: var(--green-dark);
+}
+
+#careers.band {
+  background: #f4f7f6;
+}
+
+#careers.band h2,
+#careers.band h3,
+#careers.band h4,
+#careers.band p,
+#careers.band .section-header p {
+  color: var(--ink);
+}
+
+#careers.band h2,
+#careers.band h3 {
+  color: var(--green-dark);
+}
+
+#careers.band .card {
+  background: #fff;
+  border-color: var(--line);
+  box-shadow: 0 10px 26px rgba(7, 61, 45, 0.08);
 }
 
 .publications-layout {
