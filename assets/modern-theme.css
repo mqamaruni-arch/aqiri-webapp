@@ -39,6 +39,7 @@ body {
 }
 
 .brand {
+  align-items: center;
   gap: 0;
   width: fit-content;
   min-width: auto;
@@ -67,7 +68,8 @@ body {
 
 nav {
   gap: 0.12rem;
-  align-self: stretch;
+  align-self: center;
+  align-items: center;
   justify-content: flex-end;
 }
 
@@ -430,19 +432,17 @@ p {
 }
 
 .journal-card .journal-feature {
-  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+  grid-template-columns: minmax(320px, 520px) minmax(0, 1fr);
   gap: 1.35rem;
-  align-items: stretch;
+  align-items: start;
   margin: 1.35rem 0;
 }
 
 .journal-card .journal-cover {
   width: 100%;
-  aspect-ratio: 3 / 4.15;
-  height: 100%;
-  max-height: 430px;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
 }
 
 .journal-card .journal-meta {
@@ -570,10 +570,4 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .journal-card .journal-cover {
-    aspect-ratio: auto;
-    height: auto;
-    max-height: none;
-    object-fit: contain;
-  }
 }
