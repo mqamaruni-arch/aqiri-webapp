@@ -1557,7 +1557,7 @@
         <span>Since 2014 | Operated under Global Center for Research and Study, GCRS</span>
       </div>
       <div>
-        <span>Copyright � 2014-2026 Al-Qamar Islamic Research Institute. All rights reserved.</span>
+        <span>Copyright &copy; 2014-2026 Al-Qamar Islamic Research Institute. All rights reserved.</span>
         <span><a href="admissions/index.html">Admissions Portal</a> | <a href="careers.html">Careers Portal</a> | <a href="news.html">News & Announcements</a></span>
       </div>
     </div>
@@ -1569,14 +1569,12 @@
       menuToggle.addEventListener("click", () => {
         const isOpen = document.body.classList.toggle("nav-open");
         menuToggle.setAttribute("aria-expanded", String(isOpen));
-        menuToggle.textContent = isOpen ? "�" : "?";
       });
 
       document.querySelectorAll("nav a").forEach((link) => {
         link.addEventListener("click", () => {
           document.body.classList.remove("nav-open");
           menuToggle.setAttribute("aria-expanded", "false");
-          menuToggle.textContent = "?";
         });
       });
     }

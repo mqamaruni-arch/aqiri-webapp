@@ -25,15 +25,17 @@ body {
 }
 
 .masthead {
-  background: #fff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(231, 245, 239, 0.94)),
+    var(--green-soft);
   border-top: 5px solid var(--green-dark);
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 4px 16px rgba(7, 61, 45, 0.08);
+  box-shadow: 0 6px 20px rgba(7, 61, 45, 0.1);
 }
 
 .masthead-inner {
   grid-template-columns: auto minmax(0, 1fr) !important;
-  gap: clamp(1.1rem, 2.4vw, 2rem);
+  gap: clamp(0.7rem, 1.4vw, 1.15rem);
   align-items: center;
   padding-block: 0.75rem;
 }
@@ -70,7 +72,7 @@ nav {
   gap: 0.12rem;
   align-self: center;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 nav a,
@@ -481,6 +483,7 @@ footer {
   border-radius: 0;
   background: #fff;
   color: var(--green-dark);
+  font-size: 0 !important;
 }
 
 @keyframes aqiriCampusGrid {
