@@ -438,8 +438,11 @@ p {
 
 .journal-card .journal-cover {
   width: 100%;
+  aspect-ratio: 3 / 4.15;
+  height: 100%;
   max-height: 430px;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .journal-card .journal-meta {
@@ -568,6 +571,9 @@ footer {
   }
 
   .journal-card .journal-cover {
+    aspect-ratio: auto;
+    height: auto;
     max-height: none;
+    object-fit: contain;
   }
 }
