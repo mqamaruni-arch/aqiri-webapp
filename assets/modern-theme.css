@@ -237,6 +237,12 @@ nav a:focus-visible,
   background: #fff;
 }
 
+.hero .button.secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.12);
+}
+
 .button:hover,
 .button:focus-visible,
 .submit:hover,
@@ -344,9 +350,46 @@ p {
   letter-spacing: -0.025em;
 }
 
-.card h4,
-.department-directory a {
+.card h4 {
   color: var(--blue-deep);
+}
+
+.department-directory a {
+  display: inline-flex;
+  align-self: end;
+  justify-self: start;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(15, 96, 71, 0.28);
+  border-left: 5px solid var(--gold);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(231, 245, 239, 0.96));
+  color: var(--green-dark);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(7, 61, 45, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+
+.department-directory a::after {
+  content: ">";
+  margin-left: 0.55rem;
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.department-directory a:hover,
+.department-directory a:focus-visible {
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(7, 61, 45, 0.14);
+  transform: translateY(-1px);
+}
+
+.department-directory a:hover::after,
+.department-directory a:focus-visible::after {
+  color: #fff;
 }
 
 .tag,
