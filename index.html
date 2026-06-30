@@ -1,1591 +1,370 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Al-Qamar Islamic Research Institute</title>
-  <meta name="description" content="Al-Qamar Islamic Research Institute is an academic research and publishing institute for Islamic Studies, Qur'anic Studies, Hadith, Seerah, Islamic Law, journals, books, fellowships, diplomas, and scholarly development.">
-  <meta name="keywords" content="Al-Qamar Islamic Research Institute, Islamic Research Institute Lahore, Islamic Studies, Qur'anic Studies, Hadith and Sunnah, Seerah, Islamic Law, Islamic academic publishing, Al-Qamar Journal, GCRS">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AQIRI | Al-Qamar Islamic Research Institute</title>
+  <meta name="description" content="AQIRI advances Islamic research, publishing, scholarly training, and academic collaboration through dedicated departments, journals, fellowships, and institutional leadership.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Al-Qamar Islamic Research Institute">
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="theme-color" content="#0f6047">
+  <meta name="theme-color" content="#071c32">
+  <meta name="format-detection" content="telephone=no">
   <link rel="canonical" href="https://aqiri.org/">
-  <link rel="sitemap" type="application/xml" href="https://aqiri.org/sitemap.xml">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Al-Qamar Islamic Research Institute">
-  <meta property="og:description" content="Research, publication, training, journals, books, fellowships, diploma programs, and scholarly collaboration in Islamic Studies.">
-  <meta property="og:url" content="https://aqiri.org/">
-  <meta property="og:image" content="https://aqiri.org/assets/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <meta property="og:site_name" content="Al-Qamar Islamic Research Institute">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AQIRI | Al-Qamar Islamic Research Institute">
+  <meta property="og:description" content="AQIRI advances Islamic research, publishing, scholarly training, and academic collaboration through dedicated departments, journals, fellowships, and institutional leadership.">
+  <meta property="og:url" content="https://aqiri.org/">
+  <meta property="og:image" content="https://aqiri.org/assets/hero-mosque-interior.jpg">
+  <meta property="og:image:alt" content="AQIRI | Al-Qamar Islamic Research Institute">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Al-Qamar Islamic Research Institute">
-  <meta name="twitter:description" content="A trusted center for Islamic research and academic publishing.">
-  <meta name="twitter:image" content="https://aqiri.org/assets/logo.png">
-  <link rel="icon" href="assets/logo.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/logo.png">
-  <link rel="preload" as="image" href="assets/al-qamar-library-hero.png" imagesrcset="assets/al-qamar-library-hero.png">
-  <link rel="preload" as="style" href="assets/modern-theme.css">
-  <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Al-Qamar Islamic Research Institute",
-        "alternateName": "AQIRI",
-        "url": "https://aqiri.org/"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Al-Qamar Islamic Research Institute",
-        "alternateName": "AQIRI",
-        "description": "An academic research and publishing institute dedicated to Islamic Studies, scholarly development, journals, books, training, fellowships, diplomas, and research collaboration.",
-        "logo": "https://aqiri.org/assets/logo.png",
-        "url": "https://aqiri.org/",
-        "sameAs": [
-          "https://alqamarjournal.com/",
-          "https://almuazjournal.net/"
-        ],
-        "department": [
-          { "@type": "Organization", "name": "Department of Qur'anic Studies" },
-          { "@type": "Organization", "name": "Department of Hadith and Sunnah" },
-          { "@type": "Organization", "name": "Department of Seerah and Islamic Civilization" },
-          { "@type": "Organization", "name": "Department of Fiqh and Islamic Law" },
-          { "@type": "Organization", "name": "Department of Islamic Thought, History and Culture" },
-          { "@type": "Organization", "name": "Department of Comparative Religion and Interfaith Studies" },
-          { "@type": "Organization", "name": "Department of Academic Publishing and Research Development" }
-        ]
-      }
-    ]
-  </script>
-  <style>
-    :root {
-      --blue: #dff4fb;
-      --blue-deep: #157d9b;
-      --green: #0f6047;
-      --green-dark: #073d2d;
-      --green-soft: #e7f5ef;
-      --ink: #171717;
-      --muted: #5f6368;
-      --paper: #f3fbfd;
-      --line: #c5e2de;
-      --gold: #c59a43;
-      --white: #ffffff;
-      --shadow: 0 18px 44px rgba(6, 45, 42, 0.12);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.62;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    p {
-      margin: 0 0 1rem;
-    }
-
-    .top-strip {
-      display: none;
-      background: var(--green-dark);
-      color: rgba(255, 255, 255, 0.9);
-      font-family: Arial, sans-serif;
-      font-size: 0.82rem;
-      letter-spacing: 0.02em;
-    }
-
-    .top-strip .wrap {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.55rem 1.25rem;
-      max-width: 1240px;
-      margin: 0 auto;
-    }
-
-    .masthead {
-      background: rgba(243, 251, 253, 0.96);
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(8px);
-    }
-
-    .masthead-inner {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 1rem 1.25rem;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      min-width: 0;
-    }
-
-    .seal {
-      width: 86px;
-      height: auto;
-      border: 0;
-      border-radius: 0;
-      object-fit: contain;
-      background: transparent;
-      flex: 0 0 auto;
-    }
-
-    .brand-title {
-      margin: 0;
-      font-size: clamp(1.2rem, 2.6vw, 2.05rem);
-      line-height: 1.08;
-      color: var(--green-dark);
-    }
-
-    .brand-kicker {
-      margin: 0.25rem 0 0;
-      font-family: Arial, sans-serif;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 0.9rem;
-      font-family: Arial, sans-serif;
-      font-size: 0.88rem;
-      color: var(--green-dark);
-    }
-
-    nav a,
-    .nav-trigger {
-      display: inline-flex;
-      align-items: center;
-      min-height: 38px;
-      padding: 0.35rem 0;
-      border: 0;
-      background: transparent;
-      color: var(--green-dark);
-      font-weight: 700;
-      font: inherit;
-      cursor: pointer;
-    }
-
-    nav a:hover,
-    .nav-trigger:hover {
-      color: var(--blue-deep);
-    }
-
-    .menu-toggle {
-      display: none;
-      justify-self: end;
-      width: 46px;
-      height: 42px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--white);
-      color: var(--green-dark);
-      font: 800 1.35rem Arial, sans-serif;
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .dropdown {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      min-width: 310px;
-      display: none;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      padding: 0.45rem;
-      z-index: 100;
-    }
-
-    .dropdown a {
-      display: block;
-      min-height: 0;
-      padding: 0.62rem 0.75rem;
-      color: var(--green-dark);
-      border-radius: 6px;
-      line-height: 1.25;
-    }
-
-    .dropdown a:hover {
-      color: #fff;
-      background: var(--green);
-    }
-
-    .nav-item:hover .dropdown,
-    .nav-item:focus-within .dropdown {
-      display: block;
-    }
-
-    .hero {
-      min-height: 72vh;
-      display: grid;
-      align-items: end;
-      background-image:
-        linear-gradient(90deg, rgba(4, 47, 36, 0.9), rgba(10, 95, 74, 0.5), rgba(19, 125, 155, 0.25)),
-        url("assets/al-qamar-library-hero.png");
-      background-size: cover;
-      background-position: center;
-      color: var(--white);
-      border-bottom: 8px solid var(--green);
-    }
-
-    .hero-inner {
-      max-width: 1240px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 7rem 1.25rem 4.5rem;
-    }
-
-    .eyebrow {
-      font-family: Arial, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.78rem;
-      color: #f2d9a7;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .hero h2 {
-      font-size: clamp(2rem, 5.4vw, 4.35rem);
-      line-height: 0.94;
-      max-width: 980px;
-      margin: 0;
-      letter-spacing: 0;
-      color: #ffffff;
-    }
-
-    .hero p {
-      font-family: Arial, sans-serif;
-      max-width: 740px;
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      margin-top: 1.3rem;
-      color: rgba(255, 255, 255, 0.92);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-top: 2rem;
-      font-family: Arial, sans-serif;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0.75rem 1rem;
-      border: 1px solid rgba(255, 255, 255, 0.55);
-      color: var(--white);
-      background: rgba(15, 96, 71, 0.92);
-      font-weight: 700;
-    }
-
-    .button.secondary {
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .quick-links {
-      background: var(--green-dark);
-      color: var(--white);
-    }
-
-    .quick-links .wrap {
-      max-width: 1240px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      font-family: Arial, sans-serif;
-    }
-
-    .quick-links a {
-      padding: 1rem 1.25rem;
-      border-right: 1px solid rgba(255, 255, 255, 0.17);
-      font-weight: 700;
-      min-height: 58px;
-    }
-
-    .quick-links a:hover {
-      background: var(--blue-deep);
-    }
-
-    section {
-      padding: 4.6rem 1.25rem;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .wrap {
-      max-width: 1240px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(260px, 1.1fr);
-      gap: 2rem;
-      align-items: start;
-      margin-bottom: 2rem;
-    }
-
-    h2,
-    h3,
-    h4 {
-      margin: 0;
-      color: var(--green-dark);
-      line-height: 1.12;
-    }
-
-    .section-header h2 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-    }
-
-    .section-header p {
-      font-size: 1.05rem;
-      color: #343434;
-    }
-
-    .lead {
-      font-size: 1.12rem;
-      color: #2d2d2d;
-    }
-
-    .grid {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .grid.two {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .grid.three {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .card {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-top: 4px solid var(--blue-deep);
-      border-radius: 8px;
-      padding: 1.35rem;
-      box-shadow: 0 10px 28px rgba(20, 17, 12, 0.06);
-    }
-
-    .card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .card h4 {
-      font-size: 1.02rem;
-      margin: 1rem 0 0.5rem;
-      color: var(--blue-deep);
-    }
-
-    .department-directory .card {
-      display: grid;
-      gap: 0.75rem;
-      min-height: 190px;
-    }
-
-    .department-directory a {
-      align-self: end;
-      color: var(--blue-deep);
-      font-family: Arial, sans-serif;
-      font-weight: 800;
-    }
-
-    .admin-scope, .staff-column {
-      border-top: 1px solid var(--line);
-      padding-top: 0.75rem;
-      font-family: Arial, sans-serif;
-      font-size: 0.92rem;
-      color: #31423e;
-    }
-
-    .admin-scope strong, .staff-column strong {
-      display: block;
-      color: var(--green-dark);
-      margin-bottom: 0.35rem;
-    }
-
-    .admin-scope ul, .staff-column ul {
-      margin: 0;
-      padding-left: 1.1rem;
-    }
-
-    .admin-scope li + li, .staff-column li + li {
-      margin-top: 0.45rem;
-    }
-
-    .link-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1.1rem;
-      font-family: Arial, sans-serif;
-      font-weight: 800;
-    }
-
-    .link-row a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 40px;
-      padding: 0.62rem 0.95rem;
-      color: var(--green-dark);
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(21, 125, 155, 0.32);
-      border-radius: 999px;
-      box-shadow: 0 8px 18px rgba(6, 45, 42, 0.08);
-      font-size: 0.86rem;
-      letter-spacing: 0;
-      line-height: 1;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
-    }
-
-    .link-row a:hover,
-    .link-row a:focus-visible {
-      color: #fff;
-      background: var(--green);
-      box-shadow: 0 12px 24px rgba(6, 45, 42, 0.16);
-      transform: translateY(-1px);
-    }
-
-    .link-row a:first-child {
-      background: var(--green);
-      border-color: var(--green);
-      color: #fff;
-    }
-
-    .link-row a:first-child:hover,
-    .link-row a:first-child:focus-visible {
-      background: var(--blue-deep);
-      border-color: var(--blue-deep);
-    }
-
-    .status-tab {
-      display: inline-flex;
-      align-items: center;
-      width: fit-content;
-      min-height: 30px;
-      margin-bottom: 0.75rem;
-      padding: 0.35rem 0.65rem;
-      border-radius: 999px;
-      background: #e7f5ef;
-      color: var(--green-dark);
-      font: 800 0.78rem Arial, sans-serif;
-      border: 1px solid rgba(15, 96, 71, 0.18);
-    }
-
-    .vacancy-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-bottom: 1rem;
-      font-family: Arial, sans-serif;
-      font-weight: 800;
-    }
-
-    .vacancy-tabs span {
-      display: inline-flex;
-      align-items: center;
-      min-height: 36px;
-      padding: 0.5rem 0.8rem;
-      border-radius: 999px;
-      background: #fff;
-      color: var(--green-dark);
-      border: 1px solid rgba(15, 96, 71, 0.3);
-      font-size: 0.82rem;
-      box-shadow: 0 6px 14px rgba(6, 45, 42, 0.06);
-    }
-
-    .vacancy-tabs span:first-child {
-      background: var(--green);
-      color: #fff;
-      border-color: var(--green);
-    }
-
-    .vacancy-list {
-      display: grid;
-      gap: 0.75rem;
-    }
-
-    .vacancy-item {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(180px, 0.8fr) auto;
-      gap: 0.85rem;
-      align-items: center;
-      padding: 0.9rem;
-      border: 1px solid rgba(21, 125, 155, 0.18);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.72);
-      font-family: Arial, sans-serif;
-    }
-
-    .vacancy-item:first-child {
-      border-top: 1px solid rgba(21, 125, 155, 0.18);
-      padding-top: 0.9rem;
-    }
-
-    .vacancy-title {
-      display: block;
-      color: var(--green-dark);
-      font-weight: 900;
-      font-size: 1.02rem;
-    }
-
-    .vacancy-dept,
-    .vacancy-track {
-      display: block;
-      color: #243835;
-      font-size: 0.88rem;
-      line-height: 1.35;
-    }
-
-    .vacancy-dept {
-      padding: 0.45rem 0.65rem;
-      border-radius: 8px;
-      background: #e7f5ef;
-      color: var(--green-dark);
-      font-weight: 800;
-    }
-
-    .release-meta {
-      display: inline-flex;
-      width: fit-content;
-      margin-bottom: 0.75rem;
-      padding: 0.35rem 0.65rem;
-      border-radius: 999px;
-      background: #e7f5ef;
-      color: var(--green-dark);
-      border: 1px solid rgba(15, 96, 71, 0.18);
-      font: 800 0.78rem Arial, sans-serif;
-    }
-
-    .journal-feature {
-      display: grid;
-      grid-template-columns: minmax(180px, 0.52fr) minmax(0, 1fr);
-      gap: 1rem;
-      align-items: start;
-      margin: 1rem 0;
-    }
-
-    .journal-cover {
-      width: 100%;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 8px;
-      background: #fff;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-    }
-
-    .journal-meta {
-      font-family: Arial, sans-serif;
-      font-size: 0.94rem;
-      color: inherit;
-    }
-
-    .journal-meta dl {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0.35rem 0.75rem;
-      margin: 0;
-    }
-
-    .journal-meta dt {
-      font-weight: 800;
-    }
-
-    .journal-meta dd {
-      margin: 0;
-    }
-
-    .number {
-      font-family: Arial, sans-serif;
-      color: var(--gold);
-      font-weight: 800;
-      margin-bottom: 0.6rem;
-    }
-
-    .panel {
-      background: #fff;
-      border-left: 8px solid var(--green);
-      padding: 1.5rem;
-      box-shadow: var(--shadow);
-    }
-
-    .band {
-      background: var(--green-dark);
-      color: #f5efe3;
-    }
-
-    .band h2,
-    .band h3 {
-      color: #fff;
-    }
-
-    .band .card {
-      background: #0f4d3a;
-      border-color: rgba(255, 255, 255, 0.14);
-      color: #f5efe3;
-      box-shadow: none;
-    }
-
-    .band .card h3,
-    .band .card h4 {
-      color: #f4d28f;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 1.15rem;
-    }
-
-    li {
-      margin-bottom: 0.52rem;
-    }
-
-    .compact-list {
-      columns: 2;
-      column-gap: 2rem;
-      font-family: Arial, sans-serif;
-      font-size: 0.95rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 1rem;
-      align-items: start;
-    }
-
-    .form-shell {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 1.25rem;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.75rem;
-      font-family: Arial, sans-serif;
-    }
-
-    label {
-      display: grid;
-      gap: 0.28rem;
-      color: #3a3a3a;
-      font-size: 0.88rem;
-      font-weight: 700;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      border: 1px solid #cfc7ba;
-      background: #fbfaf7;
-      padding: 0.75rem;
-      font: inherit;
-      min-height: 42px;
-    }
-
-    textarea,
-    .wide {
-      grid-column: 1 / -1;
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .submit {
-      grid-column: 1 / -1;
-      border: 0;
-      background: var(--green);
-      color: #fff;
-      font-weight: 800;
-      min-height: 46px;
-      cursor: pointer;
-    }
-
-    footer {
-      background: var(--green-dark);
-      color: rgba(255, 255, 255, 0.9);
-      padding: 2rem 1.25rem;
-      font-family: Arial, sans-serif;
-    }
-
-    footer .wrap {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    footer .wrap div {
-      display: grid;
-      gap: 0.35rem;
-    }
-
-    footer a {
-      color: #dff4fb;
-      font-weight: 800;
-    }
-
-    @media (max-width: 980px) {
-      .masthead-inner {
-        grid-template-columns: 1fr auto;
-      }
-
-      .section-header,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .menu-toggle {
-        display: inline-grid;
-        place-items: center;
-      }
-
-      nav {
-        grid-column: 1 / -1;
-        display: none;
-        width: 100%;
-        background: var(--white);
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        padding: 0.75rem;
-        box-shadow: var(--shadow);
-      }
-
-      body.nav-open nav {
-        display: grid;
-        gap: 0.35rem;
-      }
-
-      nav a,
-      .nav-trigger {
-        width: 100%;
-        justify-content: flex-start;
-        min-height: 44px;
-        padding: 0.6rem 0.7rem;
-        border-radius: 6px;
-      }
-
-      .nav-item {
-        width: 100%;
-      }
-
-      .nav-item .dropdown {
-        display: grid;
-        position: static;
-        min-width: 100%;
-        box-shadow: none;
-        margin: 0.15rem 0 0.45rem;
-        background: var(--green-soft);
-      }
-
-      .brand-title {
-        font-size: clamp(1.15rem, 5vw, 1.75rem);
-      }
-
-      .brand-kicker {
-        display: none;
-      }
-
-      .seal {
-        width: 68px;
-      }
-
-      .quick-links .wrap,
-      .grid.three,
-      .grid.two,
-      .journal-feature {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .vacancy-item {
-        grid-template-columns: 1fr;
-        align-items: start;
-      }
-
-      .vacancy-item .link-row {
-        margin-top: 0;
-      }
-    }
-
-    @media (min-width: 981px) {
-      body.nav-open nav {
-        display: flex;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .top-strip .wrap,
-      footer .wrap {
-        display: block;
-      }
-
-      .hero {
-        min-height: 74vh;
-      }
-
-      .hero-inner {
-        padding: 5rem 1rem 3rem;
-      }
-
-      .quick-links .wrap,
-      .grid.three,
-      .grid.two,
-      .journal-feature,
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .compact-list {
-        columns: 1;
-      }
-
-      section {
-        padding: 3.2rem 1rem;
-      }
-    }
-  .menu-toggle::before{content:"";display:block;width:22px;height:16px;background:linear-gradient(var(--green-dark),var(--green-dark)) 0 0/100% 2px no-repeat,linear-gradient(var(--green-dark),var(--green-dark)) 0 50%/100% 2px no-repeat,linear-gradient(var(--green-dark),var(--green-dark)) 0 100%/100% 2px no-repeat}body.nav-open .menu-toggle::before{content:"X";width:auto;height:auto;background:none;font:800 1.35rem Arial,sans-serif;color:var(--green-dark)}</style>
-  <link rel="stylesheet" href="assets/modern-theme.css">
+  <meta name="twitter:title" content="AQIRI | Al-Qamar Islamic Research Institute">
+  <meta name="twitter:description" content="AQIRI advances Islamic research, publishing, scholarly training, and academic collaboration through dedicated departments, journals, fellowships, and institutional leadership.">
+  <meta name="twitter:image" content="https://aqiri.org/assets/hero-mosque-interior.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aqiri.org/#organization","name":"Al-Qamar Islamic Research Institute","url":"https://aqiri.org/","logo":{"@type":"ImageObject","url":"https://aqiri.org/assets/al-qamar-seal-transparent-v3.png"},"image":"https://aqiri.org/assets/al-qamar-seal-transparent-v3.png"},{"@type":"WebSite","@id":"https://aqiri.org/#website","url":"https://aqiri.org/","name":"Al-Qamar Islamic Research Institute","description":"AQIRI advances Islamic research, publishing, scholarly training, and academic collaboration through dedicated departments, journals, fellowships, and institutional leadership.","publisher":{"@id":"https://aqiri.org/#organization"}},{"@type":"WebPage","@id":"https://aqiri.org/#webpage","url":"https://aqiri.org/","name":"AQIRI | Al-Qamar Islamic Research Institute","description":"AQIRI advances Islamic research, publishing, scholarly training, and academic collaboration through dedicated departments, journals, fellowships, and institutional leadership.","isPartOf":{"@id":"https://aqiri.org/#website"},"about":{"@id":"https://aqiri.org/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://aqiri.org/assets/hero-mosque-interior.jpg"}}]}</script>
 </head>
 <body>
-  <div class="top-strip">
-    <div class="wrap">
-      <span>Operated under Global Center for Research and Study, GCRS</span>
-      <span>Islamic Studies | Research | Publishing | Scholarly Development</span>
-    </div>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="masthead">
-    <div class="masthead-inner">
-      <a class="brand" href="#home" aria-label="Al-Qamar Islamic Research Institute home">
-        <img class="seal" src="assets/logo.png" width="1254" height="1254" alt="Al-Qamar Islamic Research Institute logo" decoding="async">
+  <header class="site-header">
+    <div class="shell brand-row">
+      <a class="brand" href="index.html" aria-label="Al-Qamar home">
+        <span>
+          <strong>Al-Qamar</strong>
+          <small>Islamic Research Institute</small>
+        </span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"></button>
-      <nav aria-label="Primary navigation">
-        <div class="nav-item">
-          <button class="nav-trigger" type="button" aria-haspopup="true">About</button>
-          <div class="dropdown" aria-label="About submenu">
-            <a href="#about">Introduction</a>
-            <a href="#vision">Vision</a>
-            <a href="#administration">Institute Administration</a>
-            <a href="administration/board-of-governors.html">Board of Governors</a>
-            <a href="administration/director-general.html">Director General</a>
-            <a href="administration/chief-administrator.html">Chief Administrative Officer (CAO)</a>
-            <a href="#research">Objectives and Functions</a>
-          </div>
-        </div>
-        <div class="nav-item">
-          <button class="nav-trigger" type="button" aria-haspopup="true">Departments</button>
-          <div class="dropdown" aria-label="Departments submenu">
-            <a href="departments/quranic-studies.html">Qur'anic Studies</a>
-            <a href="departments/hadith-sunnah.html">Hadith and Sunnah</a>
-            <a href="departments/seerah-civilization.html">Seerah and Islamic Civilization</a>
-            <a href="departments/fiqh-islamic-law.html">Fiqh and Islamic Law</a>
-            <a href="departments/islamic-thought-history-culture.html">Islamic Thought, History and Culture</a>
-            <a href="departments/comparative-religion-interfaith.html">Comparative Religion and Interfaith Studies</a>
-            <a href="departments/academic-publishing-research.html">Academic Publishing and Research Development</a>
-          </div>
-        </div>
-        <a href="#publications">Publications</a>
-        <div class="nav-item">
-          <button class="nav-trigger" type="button" aria-haspopup="true">Admissions</button>
-          <div class="dropdown" aria-label="Admissions submenu">
-            <a href="admissions/index.html">Admissions Portal</a>
-            <a href="admissions/post-doctoral-fellowships.html">Post Doctoral Fellowships</a>
-            <a href="admissions/diploma-programs.html">Diploma Programs</a>
-            <a href="admissions/advanced-diplomas.html">Advanced Diplomas</a>
-          </div>
-        </div>
-        <a href="#events">Conferences</a>
-        <a href="#collaboration">Collaboration</a>
-        <a href="careers.html">Careers</a>
-        <a href="news.html">News</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span><b>Menu</b>
+      </button>
     </div>
+    <nav id="site-nav" class="main-nav" aria-label="Main navigation">
+      <div class="shell nav-inner">
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#departments">Departments</a>
+        <a href="#publications">Publications</a>
+        <a href="manuscripts.html">Manuscripts</a>
+        <a href="#programs">Admissions</a>
+        <a href="#news">News &amp; Notices</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <main id="home">
-    <section class="hero" aria-label="Al-Qamar Islamic Research Institute">
-      <div class="hero-inner">
-        <div class="eyebrow">Academic Research Institute</div>
-        <h2>Advancing Islamic knowledge through research, publication, and scholarly service.</h2>
-        <p>Al-Qamar Islamic Research Institute is dedicated to Islamic Studies, scholarly development, and serious research in Islamic thought and civilization.</p>
-        <div class="hero-actions">
-          <a class="button" href="#departments">Explore Departments</a>
-          <a class="button secondary" href="#publications">Journals & Publications</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="quick-links" aria-label="Quick links">
-      <div class="wrap">
-        <a href="#research">Objectives & Functions</a>
-        <a href="#publications">Journals & Books</a>
-        <a href="admissions/index.html">Admissions Portal</a>
-        <a href="careers.html">Careers Portal</a>
-      </div>
-    </div>
-
-    <section id="about">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>About Al-Qamar Islamic Research Institute</h2>
-          <div>
-            <p class="lead">Al-Qamar Islamic Research Institute is an academic research and publishing institute dedicated to Islamic Studies, scholarly development, and the promotion of serious research in Islamic thought and civilization.</p>
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Academic research institute</p>
+          <h1>Advancing Islamic Scholarship through <em>research and publication</em></h1>
+          <p class="hero-intro">Promoting rigorous Islamic research, ethical publishing, and scholarly service for contemporary academic and social needs.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#departments">Explore our work <span>→</span></a>
+            <a class="text-link" href="#about">Discover<span>↘</span></a>
           </div>
         </div>
-        <div class="grid two">
-          <div>
-            <p>The Institute provides a platform for researchers, scholars, teachers, students, and academic institutions to study Islam through authentic sources, classical scholarship, and modern research methods.</p>
-            <p>The Institute is committed to advancing knowledge in the major fields of Islamic Studies, including Qur'anic Studies, Hadith and Sunnah, Seerah, Islamic Law and Jurisprudence, Islamic History, Islamic Thought, Islamic Civilization, Tasawwuf, Comparative Religion, and contemporary Muslim society. Its purpose is to encourage meaningful research that connects the rich intellectual heritage of Islam with the needs and questions of the modern world.</p>
-            <p>Al-Qamar Islamic Research Institute works to promote academic excellence through research projects, scholarly publications, journals, books, conferences, seminars, training workshops, and research guidance. It supports scholars in producing original, ethical, and high-quality academic work that contributes to Islamic knowledge and benefits society.</p>
+        <div class="hero-aside reveal">
+          <div class="hero-calligraphy" aria-label="Arabic calligraphy">
+            <canvas data-calligraphy width="2000" height="2000" role="img" aria-label="Arabic calligraphy"></canvas>
           </div>
-          <div class="panel">
-            <p>The Institute believes that Islamic Studies should not only preserve the intellectual legacy of the past but also provide guidance for the present and future. Therefore, Al-Qamar encourages critical thinking, interdisciplinary dialogue, publication ethics, and global scholarly cooperation.</p>
-            <p>Operating under the vision of the Global Center for Research and Study, GCRS, Al-Qamar Islamic Research Institute aims to become a trusted center for Islamic research, academic publishing, and intellectual service at national and international levels. Its mission is to serve knowledge, strengthen research culture, preserve Islamic heritage, and promote a peaceful, informed, and morally responsible society.</p>
+          <div class="hero-card">
+            <p>“So ask the people of knowledge if you do not know” — Qur’an 16:43
+</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="vision" class="band">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Vision</h2>
-          <p>The vision of Al-Qamar Islamic Research Institute is to become a leading international center for Islamic Studies, Islamic research, academic publishing, and scholarly development.</p>
-        </div>
-        <div class="grid two">
-          <div class="card">
-            <h3>Academic Seriousness</h3>
-            <p>The Institute aims to serve as a trusted platform where the Qur'an, Sunnah, Seerah, Islamic law, Islamic history, Islamic civilization, and Muslim intellectual heritage are studied with academic seriousness, intellectual depth, and contemporary relevance.</p>
-            <p>Al-Qamar Islamic Research Institute seeks to promote a research culture rooted in the authentic sources of Islam and enriched by modern research methodologies.</p>
-          </div>
-          <div class="card">
-            <h3>Contemporary Relevance</h3>
-            <p>The Institute envisions a scholarly environment where Islamic knowledge is not only preserved, but also critically studied, explained, published, and applied to the moral, intellectual, social, educational, and civilizational challenges of the present age.</p>
-            <p>The Institute aspires to contribute to the revival of Islamic scholarship, the reconstruction of Muslim thought, and the development of a peaceful, ethical, informed, and knowledge-based society.</p>
-          </div>
-        </div>
+    <section class="quick-links" aria-label="Quick links">
+      <div class="shell quick-grid">
+        <a href="#departments"><span>01</span><b>Fields of Inquiry</b><i>→</i></a>
+        <a href="#publications"><span>02</span><b>Academic Publications</b><i>→</i></a>
+        <a href="#programs"><span>03</span><b>Programs &amp; Fellowships</b><i>→</i></a>
+        <a href="#contact"><span>04</span><b>Academic Collaboration</b><i>→</i></a>
       </div>
     </section>
 
-    <section id="mission">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Mission</h2>
-          <p>The mission of Al-Qamar Islamic Research Institute is to advance the study, understanding, preservation, and dissemination of Islamic knowledge through research, publication, training, and academic collaboration.</p>
+    <section id="about" class="section about">
+      <div class="shell split">
+        <div class="section-heading reveal">
+          <p class="eyebrow dark"><span></span> Who we are</p>
+          <h2>A Scholarly Institution for
+ <em>Islamic Research and Publication Since 2014</em></h2>
         </div>
-        <div class="card">
-          <h3>The Institute is committed:</h3>
-          <ul class="compact-list">
-            <li>To promote high-quality research in Islamic Studies and its major disciplines.</li>
-            <li>To encourage scholarly study of the Holy Qur'an, Tafsir, Hadith, Sunnah, Seerah, Islamic law, Islamic history, Islamic thought, Islamic civilization, Islamic philosophy, Tasawwuf, comparative religion, and contemporary Muslim society.</li>
-            <li>To publish quality academic journals, books, research papers, edited volumes, translations, and scholarly reports.</li>
-            <li>To support researchers, scholars, teachers, students, and institutions in academic writing, research methodology, publication ethics, peer review, and scholarly publishing.</li>
-            <li>To preserve Islamic intellectual heritage and connect it with the needs, questions, and challenges of the modern world.</li>
-            <li>To develop serious academic dialogue between classical Islamic scholarship and contemporary social sciences, humanities, law, education, ethics, peace studies, and interfaith studies.</li>
-            <li>To provide training programs, workshops, seminars, lectures, and conferences for the development of research skills and scholarly excellence.</li>
-            <li>To promote authentic, balanced, ethical, and research-based understanding of Islam.</li>
-            <li>To build national and international academic collaboration with universities, research institutes, journals, libraries, scholars, and publishers.</li>
-            <li>To contribute to peace, tolerance, moral development, intellectual growth, and the betterment of Muslim society and humanity at large.</li>
-          </ul>
+        <div class="about-copy reveal">
+          <p class="lead">Al-Qamar Islamic Research Institute is an academic research and publishing institute dedicated to Islamic Studies, scholarly development, and the promotion of serious research in Islamic thought and civilization.</p>
+          <p>The Institute provides a scholarly platform for researchers, teachers, students, authors, editors, and academic institutions to engage with Islam through authentic sources, classical scholarship, and modern research methods.</p>
+          <a class="text-link dark-link" href="#mission">Read our mission <span>→</span></a>
         </div>
       </div>
-    </section>
-
-    <section id="administration">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Institute Administration</h2>
-          <p>The Institute Administration supervises academic planning, research coordination, publication management, training programs, institutional partnerships, and quality assurance for all scholarly activities of Al-Qamar Islamic Research Institute.</p>
-        </div>
-        <div class="grid three">
-          <article class="card">
-            <h3>Board of Governors</h3>
-            <p>The Board of Governors provides senior academic guidance, institutional oversight, quality assurance, and scholarly direction for Al-Qamar Islamic Research Institute.</p>
-            <a class="button secondary" href="administration/board-of-governors.html">View Board of Governors</a>
-          </article>
-          <article class="card">
-            <h3>Director General</h3>
-            <p>The Director General provides academic leadership, institutional vision, policy guidance, research priorities, and coordination with Global Center for Research and Study, GCRS.</p>
-            <a class="button secondary" href="administration/director-general.html">View Director General</a>
-          </article>
-          <article class="card">
-            <h3>Chief Administrative Officer (CAO)</h3>
-            <p>The Chief Administrative Officer coordinates institutional administration, official communication, records, scheduling, application routing, and daily operational follow-up.</p>
-            <a class="button secondary" href="administration/chief-administrator.html">View CAO Office</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="research">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Objectives and Functions</h2>
-          <p>The main objectives and functions of Al-Qamar Islamic Research Institute are to organize, promote, and support research in various fields of Islamic learning and Islamic Studies.</p>
-        </div>
-        <div class="grid two">
-          <div class="card">
-            <ul>
-              <li>To develop a strong academic methodology for research in the Qur'an, Hadith, Seerah, Fiqh, Islamic history, Islamic thought, Islamic civilization, and related fields.</li>
-              <li>To encourage research based on the original sources of Islam, including the Holy Qur'an, Sunnah, classical Islamic texts, scholarly traditions, and historical sources.</li>
-              <li>To publish peer-reviewed journals, academic books, research monographs, edited volumes, translations, conference proceedings, and scholarly reports.</li>
-              <li>To provide a platform where researchers, teachers, students, editors, and scholars can present, discuss, review, and publish their academic work.</li>
-              <li>To promote original, analytical, ethical, and balanced scholarship on Islamic thought, Muslim society, Islamic culture, and contemporary issues.</li>
-              <li>To support research in Qur'anic Studies, Tafsir, Hadith Sciences, Sunnah Studies, Seerah, Islamic Jurisprudence, Usul al-Fiqh, Islamic History, Islamic Philosophy, Kalam, Tasawwuf, Comparative Religion, Islamic Education, Islamic Ethics, and Muslim Civilization.</li>
-              <li>To study contemporary issues facing the Muslim world in the light of Islamic teachings, including education, law, family, society, economy, media, youth, morality, peace, governance, and interfaith relations.</li>
-              <li>To arrange national and international seminars, conferences, workshops, training programs, lectures, academic meetings, and research forums.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <ul>
-              <li>To guide young researchers in research proposal writing, thesis writing, article writing, citation methods, referencing styles, academic editing, peer review, and publication standards.</li>
-              <li>To promote publication ethics, originality, plagiarism awareness, responsible citation, transparent peer review, and quality academic writing.</li>
-              <li>To develop research projects on Islamic heritage, Muslim intellectual history, Islamic manuscripts, classical texts, contemporary Islamic thought, and social issues related to Muslim communities.</li>
-              <li>To create academic linkages with universities, madaris, research centers, libraries, journals, publishers, scholars, and international academic organizations.</li>
-              <li>To encourage interdisciplinary research between Islamic Studies and fields such as social sciences, humanities, law, education, history, philosophy, literature, peace studies, and civilization studies.</li>
-              <li>To strengthen the academic identity of Islamic Studies by producing research that is authentic in source, strong in method, balanced in approach, and useful for society.</li>
-              <li>To contribute to intellectual dialogue, interfaith understanding, social harmony, peacebuilding, tolerance, and ethical development in society.</li>
-              <li>To serve as a center for scholarly guidance, academic networking, research training, and intellectual service for the Muslim Ummah and the global academic community.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="departments">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Academic Departments</h2>
-          <p>Al-Qamar's departments support focused research, publication, training, and scholarly collaboration across the major fields of Islamic Studies.</p>
-        </div>
-        <div class="grid three department-directory">
-          <article class="card">
-            <div class="number">01</div>
-            <h3>Qur'anic Studies</h3>
-            <p>Academic study of the Holy Qur'an, Tafsir, Qur'anic sciences, and contemporary guidance.</p>
-            <div class="staff-column"><strong>Team Roles</strong>Head of Department, Research Fellow, Teaching Associate, Research Assistant</div>
-            <a href="departments/quranic-studies.html">Open department</a>
-          </article>
-          <article class="card">
-            <div class="number">02</div>
-            <h3>Hadith and Sunnah</h3>
-            <p>Research in Hadith sciences, Sunnah studies, classical literature, and Prophetic guidance.</p>
-            <div class="staff-column"><strong>Team Roles</strong>Head of Department, Hadith Research Fellow, Editor, Research Assistant</div>
-            <a href="departments/hadith-sunnah.html">Open department</a>
-          </article>
-          <article class="card">
-            <div class="number">03</div>
-            <h3>Seerah and Islamic Civilization</h3>
-            <p>Study of Seerah, leadership, Muslim institutions, intellectual history, and civilization.</p>
-            <div class="staff-column"><strong>Team Roles</strong>Head of Department, Seerah Scholar, Civilization Studies Fellow, Coordinator</div>
-            <a href="departments/seerah-civilization.html">Open department</a>
-          </article>
-          <article class="card">
-            <div class="number">04</div>
-            <h3>Fiqh and Islamic Law</h3>
-            <p>Islamic jurisprudence, legal theory, Maqasid al-Shariah, and contemporary legal questions.</p>
-            <div class="staff-column"><strong>Team Roles</strong>Head of Department, Fiqh Research Fellow, Legal Studies Associate, Assistant</div>
-            <a href="departments/fiqh-islamic-law.html">Open department</a>
-          </article>
-          <article class="card">
-            <div class="number">05</div>
-            <h3>Islamic Thought, History and Culture</h3>
-            <p>Muslim intellectual history, Kalam, philosophy, Tasawwuf, literature, and culture.</p>
-            <div class="staff-column"><strong>Team Roles</strong>Head of Department, History Fellow, Culture Researcher, Academic Assistant</div>
-            <a href="departments/islamic-thought-history-culture.html">Open department</a>
-          </article>
-          <article class="card">
-            <div class="number">06</div>
-            <h3>Comparative Religion and Interfaith Studies</h3>
-            <p>World religions, interfaith dialogue, religious harmony, peacebuilding, and ethics.</p>
-            <div class="staff-column"><strong>Team Roles</strong>Head of Department, Interfaith Studies Fellow, Dialogue Coordinator, Research Assistant</div>
-            <a href="departments/comparative-religion-interfaith.html">Open department</a>
-          </article>
-          <article class="card">
-            <div class="number">07</div>
-            <h3>Academic Publishing and Research Development</h3>
-            <p>Journal development, manuscript preparation, peer review, and research training.</p>
-            <div class="staff-column"><strong>Team Roles</strong>Head of Department, Managing Editor, Publication Officer, Training Coordinator</div>
-            <a href="departments/academic-publishing-research.html">Open department</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications" class="band">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Journals & Publications</h2>
-          <p>Al-Qamar Islamic Research Institute publishes and supports academic journals, research books, edited volumes, conference proceedings, and scholarly publications in the field of Islamic Studies and related disciplines.</p>
-        </div>
-        <div class="publications-layout">
-          <article class="card journal-card">
-            <h3>Al-Qamar Journal</h3>
-            <p>Al-Qamar Journal is a scholarly research journal published under the academic vision of Al-Qamar Islamic Research Institute. The journal is dedicated to promoting high-quality research in Islamic Studies and related academic fields.</p>
-            <div class="journal-feature">
-              <img class="journal-cover" src="assets/alqamar-title-page.jpg" width="1600" height="1010" alt="Al-Qamar Journal title page cover, Volume 9 Issue 1, January-March 2026" loading="lazy" decoding="async">
-              <div class="journal-meta">
-                <h4>Current Title Page</h4>
-                <dl>
-                  <dt>Journal</dt>
-                  <dd>Al-Qamar</dd>
-                  <dt>Volume</dt>
-                  <dd>9</dd>
-                  <dt>Issue</dt>
-                  <dd>1</dd>
-                  <dt>Period</dt>
-                  <dd>January-March 2026</dd>
-                  <dt>ISSN Online</dt>
-                  <dd>2664-4398</dd>
-                  <dt>ISSN Print</dt>
-                  <dd>2664-438X</dd>
-                  <dt>Publisher</dt>
-                  <dd>Al-Qamar Islamic Research Institute, Lahore</dd>
-                </dl>
-              </div>
-            </div>
-            <p>The journal provides a platform for original, peer-reviewed, properly referenced, and ethically written research connected with Islamic knowledge, Muslim society, classical scholarship, and contemporary academic questions.</p>
-            <h4>About the Journal</h4>
-            <p>Research Journal "Al-Qamar", Lahore (ISSN Print 2664-438X, Online 2664-4398) is a double-blind peer-reviewed open access academic journal approved by the Higher Education Commission (HEC) of Pakistan in Y Category. The journal is published by Al-Qamar Islamic Research Institute, Lahore, an independent research institute.</p>
-            <p>The foundation of the journal was laid after two years of academic planning and editorial development, and its first issue was published in 2017. With more than 12 years of institutional research work behind the Institute, the journal reflects a sustained commitment to scholarly publication, research culture, and ethical academic practice.</p>
-            <p>Since its launch, the journal has received more than 40,000 manuscript submissions from scholars and researchers across Pakistan and abroad, out of which over 1,000 peer-reviewed research articles have been published. The journal publishes original research in Urdu, English, and Arabic and promotes academic dialogue across diverse scholarly traditions.</p>
-            <div class="link-row">
-              <a href="https://alqamarjournal.com/" target="_blank" rel="noopener">Visit alqamarjournal.com</a>
-            </div>
-            <h4>The journal welcomes original research articles on topics such as:</h4>
-            <ul>
-              <li>Qur'anic Studies and Tafsir</li>
-              <li>Hadith and Sunnah</li>
-              <li>Seerah of the Holy Prophet PBUH</li>
-              <li>Islamic Law and Jurisprudence</li>
-              <li>Islamic History and Civilization</li>
-              <li>Islamic Thought and Philosophy</li>
-              <li>Tasawwuf and Muslim spirituality</li>
-              <li>Comparative Religion and Interfaith Studies</li>
-              <li>Contemporary issues of the Muslim world</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Books and Research Publications</h3>
-            <p>Along with journals, Al-Qamar Islamic Research Institute also works for the publication of academic books and research material. The books program serves researchers, students, libraries, universities, religious scholars, and academic institutions.</p>
-            <p>The Institute supports authored books, edited volumes, translations, monographs, research reports, training manuals, and thematic collections that preserve Islamic heritage and connect it with contemporary academic needs.</p>
-            <p>The publications program is designed to help scholars move from raw research material to polished academic output. It supports proposal review, manuscript development, editorial planning, citation improvement, peer review coordination, language refinement, indexing readiness, and dissemination through print and digital channels.</p>
-            <p>Across its journal and publication ecosystem, the Institute has supported a large volume of scholarly activity, including more than 40,000 manuscript submissions received for Research Journal Al-Qamar and over 1,000 peer-reviewed articles published. This experience strengthens the Institute's capacity to guide authors, editors, reviewers, and research teams in producing credible academic work.</p>
-            <h4>Publication activities include:</h4>
-            <ul class="compact-list">
-              <li>Research books</li>
-              <li>Edited volumes</li>
-              <li>Conference proceedings</li>
-              <li>Monographs</li>
-              <li>Translations</li>
-              <li>Book reviews</li>
-              <li>Research reports</li>
-              <li>Academic newsletters</li>
-              <li>Training manuals</li>
-              <li>Special thematic issues</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Publication Standards</h3>
-            <p>The Institute expects all authors and contributors to follow proper academic and ethical standards. Every journal article, book chapter, monograph, translation, report, and training manual should demonstrate originality, clear argument, reliable sources, academic relevance, and respect for publication ethics.</p>
-            <p>Submissions are expected to pass through editorial screening, formatting review, plagiarism awareness checks, citation verification, and where required, a transparent peer review process. Authors should follow the relevant journal or book guidelines before submission and should clearly identify sources, translations, quotations, data, and previous publications.</p>
-            <ul>
-              <li>Original research and clear argument</li>
-              <li>Proper citation and referencing</li>
-              <li>Avoidance of plagiarism</li>
-              <li>Respect for intellectual property</li>
-              <li>Balanced and scholarly language</li>
-              <li>Proper formatting according to journal guidelines</li>
-              <li>Transparent peer review process</li>
-              <li>Academic relevance and contribution to knowledge</li>
-              <li>Disclosure of conflicts of interest where applicable</li>
-              <li>Careful use of Urdu, English, and Arabic academic conventions</li>
-              <li>Respectful engagement with classical and contemporary scholarship</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="admissions">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Admissions</h2>
-          <p>The admissions section provides pathways for advanced researchers, graduates, teachers, scholars, and professionals who want structured academic training in Islamic Studies, research methodology, publication ethics, and scholarly writing.</p>
-        </div>
-        <div class="grid three">
-          <article class="card">
-            <h3>Post Doctoral Fellowships</h3>
-            <p>Post Doctoral Fellowships are designed for senior researchers and PhD scholars who wish to pursue advanced research in Qur'anic Studies, Hadith, Seerah, Islamic law, Islamic thought, Islamic civilization, comparative religion, or academic publishing.</p>
-            <p>Fellows may work on research articles, monographs, edited volumes, translation projects, manuscript studies, and thematic research under institutional guidance.</p>
-            <div class="link-row"><a href="admissions/post-doctoral-fellowships.html">Open registration page</a></div>
-          </article>
-          <article class="card">
-            <h3>Diploma Programs</h3>
-            <p>Diploma Programs support students, teachers, researchers, and community scholars who want focused training in Islamic Studies, research methodology, academic writing, citation methods, publication ethics, and journal submission preparation.</p>
-            <p>Programs may include short modules, workshops, guided assignments, and academic mentoring.</p>
-            <div class="link-row"><a href="admissions/diploma-programs.html">Open registration page</a></div>
-          </article>
-          <article class="card">
-            <h3>Advanced Diplomas</h3>
-            <p>Advanced Diplomas are intended for learners who require deeper specialization in Islamic research, Qur'anic and Hadith studies, Fiqh, Seerah, interfaith studies, manuscript development, scholarly editing, or academic publishing.</p>
-            <p>Advanced programs may combine seminars, supervised research, reading lists, research papers, and publication-oriented training.</p>
-            <div class="link-row"><a href="admissions/advanced-diplomas.html">Open registration page</a></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="careers" class="band">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Careers</h2>
-          <p>Al-Qamar Islamic Research Institute welcomes qualified scholars, researchers, editors, trainers, coordinators, and academic support professionals who can contribute to Islamic research, publishing, training, and institutional development.</p>
-        </div>
-        <article class="card">
-          <div class="vacancy-tabs" aria-label="Vacancy categories">
-            <span>All vacancies</span>
-            <span>Academic</span>
-            <span>Editorial</span>
-            <span>Training</span>
-            <span>Administration</span>
-          </div>
-          <div class="vacancy-list">
-            <div class="vacancy-item">
-              <div>
-                <span class="vacancy-title">Research Fellow</span>
-                <span class="vacancy-track">Academic and research position</span>
-              </div>
-              <span class="vacancy-dept">Department of Qur'anic Studies</span>
-              <div class="link-row"><a href="careers.html">Apply</a></div>
-            </div>
-            <div class="vacancy-item">
-              <div>
-                <span class="vacancy-title">Postdoctoral Fellow</span>
-                <span class="vacancy-track">Advanced research fellowship</span>
-              </div>
-              <span class="vacancy-dept">Department of Hadith and Sunnah</span>
-              <div class="link-row"><a href="careers.html">Apply</a></div>
-            </div>
-            <div class="vacancy-item">
-              <div>
-                <span class="vacancy-title">Managing Editor</span>
-                <span class="vacancy-track">Editorial and publishing role</span>
-              </div>
-              <span class="vacancy-dept">Publications and Journals Office</span>
-              <div class="link-row"><a href="#contact">Apply</a></div>
-            </div>
-            <div class="vacancy-item">
-              <div>
-                <span class="vacancy-title">Peer Review Coordinator</span>
-                <span class="vacancy-track">Journal workflow role</span>
-              </div>
-              <span class="vacancy-dept">Academic Publishing and Research Development</span>
-              <div class="link-row"><a href="#contact">Apply</a></div>
-            </div>
-            <div class="vacancy-item">
-              <div>
-                <span class="vacancy-title">Workshop Facilitator</span>
-                <span class="vacancy-track">Training and seminar role</span>
-              </div>
-              <span class="vacancy-dept">Research and Training Office</span>
-              <div class="link-row"><a href="#contact">Apply</a></div>
-            </div>
-            <div class="vacancy-item">
-              <div>
-                <span class="vacancy-title">Institutional Liaison Officer</span>
-                <span class="vacancy-track">Administration and collaboration role</span>
-              </div>
-              <span class="vacancy-dept">Institute Administration</span>
-              <div class="link-row"><a href="#contact">Apply</a></div>
-            </div>
-          </div>
-          <div class="link-row"><a href="careers.html">Open careers portal</a><a href="#contact">Send profile</a></div>
+      <div class="shell pillars" id="mission">
+        <article class="reveal">
+          <span>01</span>
+          <h3>Foundational Sources</h3>
+          <p>Study of Islam through the Qur’an, Sunnah, classical Islamic texts, and recognized scholarly traditions.</p>
+        </article>
+        <article class="reveal">
+          <span>02</span>
+          <h3>Scholarly Method</h3>
+          <p>Research based on clear methodology, original inquiry, proper citation, academic review, and ethical publication practice.</p>
+        </article>
+        <article class="reveal">
+          <span>03</span>
+          <h3>Contemporary Study</h3>
+          <p>Academic engagement with present-day questions in society, education, ethics, law, interfaith relations, and Muslim intellectual life.</p>
         </article>
       </div>
     </section>
 
-    <section id="events">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Conferences and Seminars</h2>
-          <p>Al-Qamar Islamic Research Institute organizes national and international conferences, seminars, symposiums, workshops, lectures, panel discussions, and academic meetings to promote serious research and scholarly dialogue.</p>
-        </div>
-        <div class="grid two">
+    <section id="vision-objectives" class="section vision-objectives">
+      <div class="shell">
+        <div class="vision-heading reveal">
           <div>
-            <p>These academic events provide a platform for scholars, researchers, teachers, students, editors, religious scholars, and academic institutions to exchange ideas, present research, and discuss important issues facing the Muslim world and contemporary society.</p>
-            <p>The Institute believes that conferences and seminars play an important role in developing research culture. Through these events, scholars are able to share new perspectives, review classical Islamic scholarship, examine contemporary challenges, and build meaningful academic networks.</p>
-            <p>The Institute also arranges workshops and training sessions for young researchers, postgraduate students, journal editors, and faculty members. These programs may focus on research methodology, academic writing, article writing, thesis writing, citation and referencing, publication ethics, peer review, journal management, plagiarism awareness, proposal writing, and conference paper preparation.</p>
-            <div class="link-row">
-              <a href="#contact">Contact for conference collaboration</a>
-              <a href="#contact">Request archive</a>
-              <a href="#contact">Propose seminar</a>
+            <p class="eyebrow"><span></span> Vision and Objectives</p>
+            <h2>Research, publication, and <em>academic engagement.</em></h2>
+          </div>
+          <p>Research, publication, and academic engagement in Islamic Studies and related fields.</p>
+        </div>
+        <div class="vision-statement reveal">
+          <span>Our Vision</span>
+          <div>
+            <p class="vision-lead">AQIRI aims to contribute to the study, documentation, and publication of Islamic scholarship through research, academic training, and scholarly communication.</p>
+            <p>The institute is concerned with the intellectual traditions of Islam as well as the academic study of contemporary religious, social, ethical, legal, and cultural questions. Its work includes research support, peer-reviewed publication, academic programs, fellowships, and collaboration with scholars and institutions.</p>
+          </div>
+        </div>
+      </div>
+      <div class="objectives-subsection">
+        <div class="shell">
+          <div class="objectives-heading reveal">
+            <p class="eyebrow dark"><span></span> Objectives</p>
+            <h2>Eight commitments guiding our academic work.</h2>
+          </div>
+          <div class="objective-grid">
+            <article class="objective-card reveal"><span>01</span><h3>Support research in Islamic Studies</h3><p>Encourage academic work in Qur’anic Studies, Hadith, Seerah, Islamic law, Islamic thought, Muslim history, civilization, ethics, comparative religion, and related fields.</p></article>
+            <article class="objective-card reveal"><span>02</span><h3>Develop scholarly publications</h3><p>Support journals, books, monographs, edited volumes, research reports, and other academic publications through organized editorial and publishing processes.</p></article>
+            <article class="objective-card reveal"><span>03</span><h3>Maintain academic and ethical standards</h3><p>Promote peer review, editorial responsibility, proper citation, research integrity, publication ethics, and transparent scholarly practice.</p></article>
+            <article class="objective-card reveal"><span>04</span><h3>Provide academic training</h3><p>Offer diplomas, workshops, research training, fellowships, internships, and learning opportunities related to research, writing, editing, and publishing.</p></article>
+            <article class="objective-card reveal"><span>05</span><h3>Encourage interdisciplinary inquiry</h3><p>Connect Islamic Studies with history, law, education, society, culture, ethics, interfaith studies, and contemporary academic debates.</p></article>
+            <article class="objective-card reveal"><span>06</span><h3>Facilitate scholarly collaboration</h3><p>Work with researchers, teachers, editors, reviewers, universities, research centers, journals, and academic contributors.</p></article>
+            <article class="objective-card reveal"><span>07</span><h3>Improve access to research</h3><p>Support digital publication, metadata quality, indexing readiness, open-access visibility, and organized preservation of scholarly work.</p></article>
+            <article class="objective-card reveal"><span>08</span><h3>Contribute to informed academic discussion</h3><p>Provide research, publications, programs, and scholarly resources supporting critical, ethical, and evidence-based engagement with relevant academic and social questions.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="administration" class="section administration">
+      <div class="shell">
+        <div class="administration-intro reveal">
+          <div>
+            <p class="eyebrow dark"><span></span> Institute Administration</p>
+            <h2>Academic guidance and <em>institutional oversight.</em></h2>
+          </div>
+          <div class="administration-copy">
+            <p>Al-Qamar Islamic Research Institute is administered through a structured system of academic guidance, institutional oversight, publication management, research coordination, and administrative support. The administration ensures that the Institute’s scholarly, publishing, training, and public academic activities are conducted with order, responsibility, and professional care.</p>
+            <p>The administrative structure supports the Institute’s work in Islamic Studies, academic publishing, research development, scholarly events, institutional collaboration, and public communication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="administration-leadership" aria-label="Institute leadership">
+      <div class="shell">
+        <div class="administration-grid">
+          <article class="administration-card reveal" id="cao">
+            <span>01</span>
+            <h3>Board of Governors</h3>
+            <p>The Board of Governors provides senior guidance, institutional oversight, and academic direction for Al-Qamar Islamic Research Institute. It supports the Institute in maintaining scholarly standards, ethical practices, publication quality, and long-term institutional development.</p>
+            <a href="board-of-governors.html">View Board of Governors <b>→</b></a>
+          </article>
+          <article class="administration-card reveal">
+            <span>02</span>
+            <h3>Director General</h3>
+            <p>The Director General provides academic leadership and overall institutional direction for Al-Qamar Islamic Research Institute. The Director General supervises the Institute’s research priorities, publication vision, academic programs, scholarly activities, and institutional development.</p>
+            <a href="director-general.html">View Director General <b>→</b></a>
+          </article>
+          <article class="administration-card reveal">
+            <span>03</span>
+            <h3>Chief Administrative Officer</h3>
+            <p>The Chief Administrative Officer coordinates the administrative affairs of the Institute. This office manages official communication, records, scheduling, application routing, documentation, internal coordination, and daily operational follow-up.</p>
+            <a href="#administration">View CAO Office <b>→</b></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="departments" class="section departments">
+      <div class="shell">
+        <div class="section-top reveal">
+          <div>
+            <p class="eyebrow"><span></span> Scholarly Focus</p>
+            <h2>Fields of inquiry</h2>
+          </div>
+          <p>Focused centers for research, publication, training, and scholarly collaboration across the major disciplines of Islamic Studies.</p>
+        </div>
+        <div class="department-list">
+          <div class="department reveal"><span>01</span><h3>Qur’anic Studies</h3><p>Tafsir, Qur’anic sciences, and contemporary guidance</p></div>
+          <div class="department reveal"><span>02</span><h3>Hadith & Sunnah</h3><p>Hadith sciences, classical literature, and Prophetic guidance</p></div>
+          <div class="department reveal"><span>03</span><h3>Seerah & Islamic Civilization</h3><p>Leadership, institutions, intellectual history, and civilization</p></div>
+          <div class="department reveal"><span>04</span><h3>Fiqh & Islamic Law</h3><p>Jurisprudence, legal theory, Maqasid, and contemporary questions</p></div>
+          <div class="department reveal"><span>05</span><h3>Islamic Thought, History & Culture</h3><p>Kalam, philosophy, Tasawwuf, literature, and culture</p></div>
+          <div class="department reveal"><span>06</span><h3>Comparative Religion & Interfaith</h3><p>Dialogue, religious harmony, peacebuilding, and ethics</p></div>
+          <div class="department reveal"><span>07</span><h3>Academic Publishing & Research</h3><p>Peer review, manuscript development, and scholarly training</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section publication">
+      <div class="shell">
+        <div class="publication-heading reveal">
+          <div>
+            <p class="eyebrow dark"><span></span> Publications</p>
+            <h2>Academic journals and <em>publishing platforms.</em></h2>
+          </div>
+          <p>Academic journals, scholarly platforms, and publication initiatives connected with AQIRI’s research and publishing work.</p>
+        </div>
+        <div class="journal-grid">
+          <article class="journal-card reveal">
+            <div class="journal-cover">
+              <img src="assets/alqamar-title-page.jpg" alt="Al-Qamar journal" loading="lazy">
             </div>
-          </div>
-          <div class="card">
-            <h3>Key Areas of Conferences and Seminars</h3>
-            <ul>
-              <li>Qur'anic Studies and Tafsir</li>
-              <li>Hadith, Sunnah, and Seerah Studies</li>
-              <li>Islamic Law and Contemporary Jurisprudence</li>
-              <li>Islamic History, Thought, and Civilization</li>
-              <li>Comparative Religion and Interfaith Dialogue</li>
-              <li>Islamic Education and Research Methodology</li>
-              <li>Muslim Society and Contemporary Challenges</li>
-              <li>Peace, Ethics, Tolerance, and Social Harmony</li>
-              <li>Academic Publishing and Publication Ethics</li>
-              <li>Youth, Morality, Media, and Modern Muslim Identity</li>
-            </ul>
-          </div>
+            <div class="journal-card-body">
+              <div class="journal-tags"><span>Quarterly</span><span>Open Access</span></div>
+              <h3>Al-Qamar</h3>
+              <p>A double-blind peer-reviewed, open-access journal publishing scholarship in Islamic Studies, humanities, and related fields. Published by AQIRI.</p>
+              <dl>
+                <div><dt>ISSN</dt><dd>2664-438X · 2664-4398</dd></div>
+                <div><dt>Languages</dt><dd>English, Urdu, Arabic</dd></div>
+              </dl>
+              <div class="journal-actions">
+                <a href="https://alqamarjournal.com" target="_blank" rel="noopener">Visit Journal</a><a href="https://alqamarjournal.com/index.php/alqamar/issue/current" target="_blank" rel="noopener">Current Issue</a><a href="manuscripts.html#al-qamar">Submit Manuscript</a>
+              </div>
+            </div>
+          </article>
+          <article class="journal-card reveal">
+            <div class="journal-cover journal-mark" aria-hidden="true"><span>AN</span></div>
+            <div class="journal-card-body">
+              <div class="journal-tags"><span>Quarterly</span><span>Open Access</span></div>
+              <h3>Al-Nasr</h3>
+              <p>A peer-reviewed, open-access journal publishing academic research in Islamic Studies, Muslim societies, humanities, law, and contemporary issues. Published by AQIRI.</p>
+              <dl>
+                <div><dt>ISSN</dt><dd>2959-1015 · 2958-9398</dd></div>
+                <div><dt>Languages</dt><dd>English, Urdu, Arabic</dd></div>
+              </dl>
+              <div class="journal-actions">
+                <a href="https://alnasrjournal.com" target="_blank" rel="noopener">Visit Journal</a><a href="https://alnasrjournal.com/index.php/journal/issue/current" target="_blank" rel="noopener">Current Issue</a><a href="manuscripts.html#al-nasr">Submit Manuscript</a>
+              </div>
+            </div>
+          </article>
         </div>
+        <p class="publication-closing reveal">Through its publication platforms and associated scholarly journals, AQIRI supports academic writing, research visibility, publication development, and responsible scholarly communication.</p>
       </div>
     </section>
 
-    <section id="collaboration">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Collaboration</h2>
-          <p>Al-Qamar Islamic Research Institute welcomes academic collaboration with universities, colleges, research centers, madaris, libraries, journals, publishers, scholars, editors, and national and international academic organizations.</p>
-        </div>
-        <div class="grid two">
+    <section id="programs" class="section programs">
+      <div class="shell">
+        <div class="section-top reveal">
           <div>
-            <p>The Institute aims to build partnerships with institutions that share a commitment to research, education, publication, ethical scholarship, and intellectual development. Through collaboration, Al-Qamar Islamic Research Institute seeks to create opportunities for joint academic work, scholarly exchange, training, research publication, and institutional growth.</p>
-            <p>Collaborative activities may include joint conferences, seminars, workshops, research projects, faculty development programs, student research programs, journal partnerships, book publication projects, edited volumes, translation projects, library development, academic training, and international scholarly networking.</p>
-            <p>Through national and international collaboration, the Institute seeks to promote scholarly exchange, mutual learning, institutional cooperation, and intellectual service to the Muslim Ummah and the global academic community.</p>
+            <p class="eyebrow dark"><span></span> Academic Programs</p>
+            <h2>Research and advanced study opportunities</h2>
           </div>
-          <div class="card">
-            <h3>Forms of Collaboration</h3>
-            <ul>
-              <li>Joint national and international conferences</li>
-              <li>Seminars, symposiums, and academic lectures</li>
-              <li>Research projects and thematic studies</li>
-              <li>Faculty development and training programs</li>
-              <li>Student research and internship programs</li>
-              <li>Journal publication and editorial partnerships</li>
-              <li>Book publication and edited volume projects</li>
-              <li>Translation and manuscript development projects</li>
-              <li>Library and digital resource cooperation</li>
-              <li>Academic writing and publication ethics workshops</li>
-              <li>Peer review and journal management training</li>
-              <li>International academic networking</li>
-              <li>Interfaith dialogue and peacebuilding activities</li>
-              <li>Institutional consultancy for research and publishing standards</li>
-            </ul>
+          <div class="program-intro">
+            <p>Al-Qamar Islamic Research Institute offers structured academic opportunities for researchers, graduates, teachers, scholars, and professionals who wish to strengthen their work in Islamic Studies, research methodology, academic writing, and scholarly publication.</p>
+            <p>The programs are designed to support serious study, guided research, manuscript development, and publication-oriented academic training.</p>
           </div>
         </div>
-        <div class="panel" style="margin-top: 1rem;">
-          <h3>Invitation for Collaboration</h3>
-          <p>Al-Qamar Islamic Research Institute invites universities, academic departments, research centers, scholars, editors, publishers, libraries, and educational organizations to collaborate in areas of mutual academic interest. The Institute welcomes serious academic partnerships that promote research excellence, Islamic scholarship, ethical publication, intellectual dialogue, and service to society.</p>
-          <div class="link-row">
-            <a href="#contact">Start collaboration</a>
-            <a href="#events">Collaborate on conferences</a>
-            <a href="#publications">Collaborate on publications</a>
-          </div>
+        <div class="program-grid two-programs">
+          <article class="program-card reveal">
+            <span>Advanced Research</span>
+            <h3>Postdoctoral Fellowships</h3>
+            <p>Postdoctoral Fellowships are intended for PhD scholars and advanced researchers who wish to pursue independent or guided research in Islamic Studies and related fields.</p>
+            <p>Fellows may work on research articles, monographs, edited volumes, translations, manuscript studies, or thematic research projects in areas such as Qur’anic Studies, Hadith, Seerah, Islamic law, Islamic thought, Islamic civilization, comparative religion, and contemporary Muslim society.</p>
+            <a href="postdoctoral-fellowships.html">Explore Fellowships <b>→</b></a>
+          </article>
+          <article class="program-card feature reveal">
+            <span>Specialist Study</span>
+            <h3>Advanced Diplomas</h3>
+            <p>Advanced Diplomas are designed for graduates, teachers, researchers, and professionals who require focused academic training in Islamic Studies, research methods, scholarly writing, editing, citation, publication ethics, and academic publishing.</p>
+            <p>These programs may include seminars, supervised reading, guided assignments, research papers, manuscript development, and publication-oriented training.</p>
+            <a href="advanced-diplomas.html">Explore Advanced Diplomas <b>→</b></a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="news" class="band">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>News & Announcements</h2>
-          <p>Official press releases from Al-Qamar Islamic Research Institute share institutional notices, journal updates, calls for papers, publication announcements, conference releases, training registrations, research opportunities, fellowship notices, internship updates, expert statements, and collaboration news.</p>
+    <section id="news" class="section news">
+      <div class="shell">
+        <div class="news-heading reveal">
+          <div>
+            <p class="eyebrow dark"><span></span> AQIRI Updates</p>
+            <h2>News & notices</h2>
+          </div>
+          <p>Latest calls, programs, admissions, and career announcements from AQIRI.</p>
         </div>
-        <div class="grid three">
-          <article class="card">
-            <span class="release-meta">Press release</span>
+        <div class="notice-category-grid">
+          <article class="notice-category reveal">
+            <span>01</span>
             <h3>Call for Papers</h3>
-            <p>Official calls for papers, special issue themes, submission opportunities, reviewer invitations, and article preparation guidance for scholars, researchers, faculty members, and postgraduate students.</p>
-            <div class="link-row"><a href="#publications">View journal releases</a></div>
+            <p>Announcements related to journal issues, special issues, thematic calls, book chapters, edited volumes, conference proceedings, and research publication opportunities.</p>
+            <small>Journal submissions · Special issues · Research articles · Publication calls</small>
+            <a href="#publications">View Calls <b>→</b></a>
           </article>
-          <article class="card">
-            <span class="release-meta">Program notice</span>
-            <h3>Training Programs</h3>
-            <p>Formal announcements for workshops, research methodology sessions, publication ethics training, academic writing programs, citation clinics, thesis support, and editorial training opportunities.</p>
-            <div class="link-row"><a href="#admissions">View program releases</a></div>
+          <article class="notice-category reveal">
+            <span>02</span>
+            <h3>Programs &amp; Events</h3>
+            <p>Announcements for academic workshops, training programs, seminars, lectures, conferences, webinars, short courses, and scholarly events.</p>
+            <small>Workshops · Seminars · Conferences · Lectures · Training · Webinars</small>
+            <a href="#programs">View Programs <b>→</b></a>
           </article>
-          <article class="card">
-            <span class="release-meta">Opportunity notice</span>
-            <h3>Research Opportunities</h3>
-            <p>Press notices for fellowships, internships, postdoctoral calls, research assistant openings, visiting scholar opportunities, funded projects, and institutional collaboration updates.</p>
-            <div class="link-row"><a href="careers.html">View opportunity releases</a></div>
+          <article class="notice-category reveal">
+            <span>03</span>
+            <h3>Admissions</h3>
+            <p>Announcements for AQIRI’s academic training and diploma programs, including admission schedules, eligibility, deadlines, and application details.</p>
+            <small>Advanced Diplomas · Language and Islamic Texts · Research and Scholarly Writing</small>
+            <a href="advanced-diplomas.html">Apply Now <b>→</b></a>
           </article>
-        </div>
-        <div class="grid three" style="margin-top: 1rem;">
-          <article class="card">
-            <span class="release-meta">Journal update</span>
-            <h3>Journal News</h3>
-            <p>Press releases about Al-Qamar Journal, including new issues, title pages, indexing information, editorial board notices, peer review updates, and publication policy announcements.</p>
-          </article>
-          <article class="card">
-            <span class="release-meta">Event release</span>
-            <h3>Conference Updates</h3>
-            <p>Official releases for conferences, seminars, symposiums, workshops, lecture series, panel discussions, research forums, keynote sessions, and archive requests for previous academic events.</p>
-            <div class="link-row"><a href="#events">View event releases</a></div>
-          </article>
-          <article class="card">
-            <span class="release-meta">Expert statement</span>
-            <h3>Joint Decree and Expert Opinion</h3>
-            <p>The Institute may issue or facilitate scholarly panels, joint academic statements, expert opinions, and research-based guidance on contemporary religious, social, ethical, educational, and publication-related questions.</p>
-            <p>Requests are reviewed by relevant scholars, editors, researchers, and subject experts according to the nature of the issue, the required academic discipline, and the public importance of the topic.</p>
-            <div class="link-row"><a href="#contact">Request expert statement</a></div>
+          <article class="notice-category reveal">
+            <span>04</span>
+            <h3>Careers &amp; Fellowships</h3>
+            <p>Announcements for employment, internships, fellowships, postdoctoral opportunities, contributor roles, volunteering, and project-based assignments.</p>
+            <small>Careers · Internships · Fellowships · Contributors · Project roles</small>
+            <a href="careers.html">View Opportunities <b>→</b></a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="wrap">
-        <div class="section-header">
-          <h2>Contact</h2>
-          <p>Al-Qamar Islamic Research Institute welcomes communication from scholars, researchers, students, authors, editors, universities, colleges, research centers, publishers, libraries, and academic organizations.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="grid">
-            <div class="card">
-              <h3>General Inquiries</h3>
-              <p>For general information about the Institute, its academic activities, departments, research areas, publications, conferences, and services, please contact the administrative office of Al-Qamar Islamic Research Institute.</p>
-              <p><strong>Al-Qamar Islamic Research Institute</strong><br>Operated under Global Center for Research and Study, GCRS<br>Email: <a href="mailto:info@aqiri.org">info@aqiri.org</a><br>Phone and WhatsApp coordination: <a href="mailto:contact@aqiri.org">contact@aqiri.org</a><br>Address: AQIRI Office, Pakistan</p>
-            </div>
-            <div class="card">
-              <h3>Research and Academic Support</h3>
-              <p>Researchers, scholars, postgraduate students, and academic institutions may contact the Institute for guidance related to research methodology, academic writing, article preparation, thesis development, citation styles, referencing, research ethics, and scholarly publication.</p>
-              <p>For Research Support:<br>Email: <a href="mailto:research@aqiri.org">research@aqiri.org</a><br>Research supervision: <a href="mailto:supervision@aqiri.org">supervision@aqiri.org</a><br>Academic writing support: <a href="mailto:writing@aqiri.org">writing@aqiri.org</a></p>
-            </div>
-            <div class="card">
-              <h3>Journals, Events and Collaboration</h3>
-              <p>Authors and contributors may contact the publication office for information about Al-Qamar Journal, book publication, manuscript submission, peer review process, publication ethics, journal guidelines, formatting requirements, and editorial policies.</p>
-              <p>For Events, Training and Collaboration:<br>Events: <a href="mailto:events@aqiri.org">events@aqiri.org</a><br>Training: <a href="mailto:training@aqiri.org">training@aqiri.org</a><br>Collaboration: <a href="mailto:collaboration@aqiri.org">collaboration@aqiri.org</a></p>
-            </div>
-          </div>
-          <div class="form-shell">
-            <h3>Contact Form</h3>
-            <p>For inquiries, proposals, submissions, and academic collaboration, please fill out the contact form below. Our team will review your message and respond as soon as possible.</p>
-            <form class="form-grid">
-              <label>Full Name
-                <input type="text" name="name" autocomplete="name">
-              </label>
-              <label>Designation / Institution
-                <input type="text" name="institution">
-              </label>
-              <label>Email Address
-                <input type="email" name="email" autocomplete="email">
-              </label>
-              <label>Phone Number
-                <input type="tel" name="phone" autocomplete="tel">
-              </label>
-              <label class="wide">Subject
-                <input type="text" name="subject">
-              </label>
-              <label class="wide">Type of Inquiry
-                <select name="inquiry">
-                  <option>General Information</option>
-                  <option>Research Support</option>
-                  <option>Journal Submission</option>
-                  <option>Book Publication</option>
-                  <option>Conference / Seminar</option>
-                  <option>Training Workshop</option>
-                  <option>Collaboration</option>
-                  <option>Other</option>
-                </select>
-              </label>
-              <label class="wide">Message
-                <textarea name="message"></textarea>
-              </label>
-              <button class="submit" type="button">Submit Inquiry</button>
-            </form>
-            <p style="margin-top: 1rem;">Please provide complete and accurate details in your message so that the concerned department may respond properly. Authors are advised to mention the title of their manuscript, journal name, and submission status when contacting the publication office. Institutions interested in collaboration are requested to provide their official profile and proposed area of cooperation.</p>
-          </div>
-        </div>
+    <section id="contact" class="contact">
+      <div class="shell contact-inner reveal">
+        <p class="eyebrow"><span></span> Work with us</p>
+        <h2>Let knowledge become<br><em>a shared endeavour.</em></h2>
+        <p>We welcome collaboration with universities, scholars, research centers, libraries, journals, and publishers.</p>
+        <a class="button button-gold" href="mailto:info@aqiri.org">Start a conversation <span>↗</span></a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
-      <div>
-        <strong>Al-Qamar Islamic Research Institute</strong>
-        <span>Since 2014 | Operated under Global Center for Research and Study, GCRS</span>
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <div><strong>Al-Qamar</strong><span>Islamic Research Institute</span></div>
       </div>
-      <div>
-        <span>Copyright &copy; 2014-2026 Al-Qamar Islamic Research Institute. All rights reserved.</span>
-        <span><a href="admissions/index.html">Admissions Portal</a> | <a href="careers.html">Careers Portal</a> | <a href="news.html">News & Announcements</a></span>
-      </div>
+      <div><h3>Institute</h3><a href="#about">About us</a><a href="departments/editorial-and-acquisitions.html">Departments</a><a href="#publications">Publications</a><a href="manuscripts.html">Manuscripts</a></div>
+      <div><h3>Engage</h3><a href="#programs">Admissions</a><a href="#news">News &amp; Notices</a><a href="#contact">Collaboration</a></div>
+      <div><h3>Connect</h3><a href="mailto:info@aqiri.org">info@aqiri.org</a><span>Lahore, Pakistan</span><a href="https://aqiri.org">aqiri.org ↗</a></div>
     </div>
+    <div class="shell footer-bottom"><span>© <span id="year"></span> Al-Qamar Islamic Research Institute</span><span>Research with integrity. Knowledge with purpose.</span></div>
   </footer>
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
 
-    if (menuToggle) {
-      menuToggle.addEventListener("click", () => {
-        const isOpen = document.body.classList.toggle("nav-open");
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
-      });
-
-      document.querySelectorAll("nav a").forEach((link) => {
-        link.addEventListener("click", () => {
-          document.body.classList.remove("nav-open");
-          menuToggle.setAttribute("aria-expanded", "false");
-        });
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-

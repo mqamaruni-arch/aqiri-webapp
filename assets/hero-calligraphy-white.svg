@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 2000">
+  <defs>
+    <filter id="white-cutout" x="0" y="0" width="2000" height="2000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="
+        0 0 0 0 1
+        0 0 0 0 1
+        0 0 0 0 1
+        -0.333 -0.333 -0.333 0 1"/>
+    </filter>
+  </defs>
+  <image x="0" y="0" width="2000" height="2000" xlink:href="hero-calligraphy-source.png" filter="url(#white-cutout)"/>
+</svg>

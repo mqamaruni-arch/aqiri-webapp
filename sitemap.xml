@@ -1,87 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aqiri.org/</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://aqiri.org/accessibility.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/admissions/</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aqiri.org/administration/dr-bilal-masud.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/administration/prof-dr-abu-sufyan-islahi.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/administration/prof-dr-arshad-munir-laghari.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/administration/prof-dr-mohd-roslan-bin-mohd-nor.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/administration/prof-dr-muhammad-khalid-masud.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/administration/prof-dr-qibla-ayaz.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/administration/prof-dr-shahbaz-khan-manj.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/advanced-diplomas.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/board-of-governors.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/brand-and-trademark-notice.html</loc>
   </url>
   <url>
     <loc>https://aqiri.org/careers.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aqiri.org/news.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://aqiri.org/contact-aqiri.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/departments/quranic-studies.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://aqiri.org/departments/academic-contributors.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/departments/hadith-sunnah.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://aqiri.org/departments/communications-and-public-relations.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/departments/seerah-civilization.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://aqiri.org/departments/communications-contributors.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/departments/fiqh-islamic-law.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://aqiri.org/departments/compliance-and-human-resource.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/departments/islamic-thought-history-culture.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://aqiri.org/departments/compliance-contributors.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/departments/comparative-religion-interfaith.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://aqiri.org/departments/digital-platform-technology.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/departments/academic-publishing-research.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://aqiri.org/departments/editorial-and-acquisitions.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/administration/board-of-governors.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://aqiri.org/departments/production-and-publishing-operations.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/administration/director-general.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://aqiri.org/departments/production-contributors.html</loc>
   </url>
   <url>
-    <loc>https://aqiri.org/administration/chief-administrator.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://aqiri.org/departments/technology-contributors.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/digital-accessibility.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/diploma-admission-form.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/director-general.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/location-and-directions.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/manuscripts.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/postdoctoral-fellowships.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/privacy-statement.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/report-copyright-infringement.html</loc>
+  </url>
+  <url>
+    <loc>https://aqiri.org/report-security-issue.html</loc>
   </url>
 </urlset>
