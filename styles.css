@@ -547,6 +547,8 @@ footer.site-footer{background:#05080c;color:#aeb7c2;padding:72px 0 28px}
 @media(max-width:680px){
   body.menu-open{overflow:hidden}
   .site-header{position:absolute;height:72px;background:rgba(4,19,34,.92);backdrop-filter:blur(12px)}
+  .brand-row{height:0;pointer-events:none}
+  .brand-row .brand{display:none}
   .header-seal{position:absolute;left:16px;top:36px;width:52px;height:52px;transform:translateY(-50%);z-index:14}
   .header-seal:hover{transform:translateY(-50%) scale(1.03)}
   .mobile-search-trigger{display:grid;place-items:center;position:absolute;right:76px;top:14px;width:44px;height:44px;padding:0;border:0;background:transparent;color:#fff;font-size:31px;line-height:1;z-index:14;cursor:pointer}
