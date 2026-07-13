@@ -556,7 +556,7 @@ footer.site-footer{background:#05080c;color:#aeb7c2;padding:72px 0 28px}
   .menu-button:hover{background:transparent}
   .menu-button span{position:absolute;width:27px;height:2px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .2s ease}
   .menu-button span:nth-child(1){transform:translateY(-5px)}
-  .menu-button span:nth-child(2){display:none}
+  .menu-button span:nth-child(2){transform:none}
   .menu-button span:nth-child(3){transform:translateY(5px)}
   .menu-button b{position:absolute;left:-9999px}
   .site-header.open .menu-button span:nth-child(1){transform:rotate(45deg)}
@@ -635,7 +635,7 @@ footer.site-footer{background:#05080c;color:#aeb7c2;padding:72px 0 28px}
     background:rgba(4,19,34,.94);
     backdrop-filter:blur(14px);
     box-shadow:0 10px 30px rgba(4,19,34,.18);
-    overflow:clip;
+    overflow:visible;
   }
   .brand-row{
     display:block;

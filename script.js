@@ -1,5 +1,19 @@
 const header = document.querySelector(".site-header");
-let menu = document.querySelector(".menu-button");
+
+function getOrCreateMenuButton(siteHeader) {
+  if (!siteHeader) return null;
+  let menuButton = siteHeader.querySelector(".menu-button");
+  if (menuButton) return menuButton;
+
+  menuButton = document.createElement("button");
+  menuButton.className = "menu-button";
+  menuButton.type = "button";
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-controls", "site-nav");
+  menuButton.innerHTML = "<span></span><span></span><span></span><b>Menu</b>";
+  (siteHeader.querySelector(".brand-row") || siteHeader).append(menuButton);
+  return menuButton;
+}
 
 function getPathPrefix() {
   return document.querySelector(".nav-inner a")?.getAttribute("href")?.startsWith("../") ? "../" : "";
@@ -62,15 +76,7 @@ function renderSharedFooter() {
   });
 }
 
-if (header && !menu) {
-  menu = document.createElement("button");
-  menu.className = "menu-button";
-  menu.type = "button";
-  menu.setAttribute("aria-expanded", "false");
-  menu.setAttribute("aria-controls", "site-nav");
-  menu.innerHTML = "<span></span><span></span><span></span><b>Menu</b>";
-  (header.querySelector(".brand-row") || header).append(menu);
-}
+if (header) getOrCreateMenuButton(header);
 
 document.querySelectorAll(".nav-inner").forEach((nav) => {
   if (nav.parentElement && !nav.parentElement.id) nav.parentElement.id = "site-nav";
@@ -99,6 +105,7 @@ renderSharedFooter();
 installBrandLogo();
 
 document.querySelectorAll(".site-header").forEach((siteHeader) => {
+  const menuButton = getOrCreateMenuButton(siteHeader);
   if (siteHeader.querySelector(".header-seal")) return;
   const nav = siteHeader.querySelector(".nav-inner");
   const nested = nav.querySelector("a")?.getAttribute("href")?.startsWith("../");
@@ -117,10 +124,19 @@ document.querySelectorAll(".site-header").forEach((siteHeader) => {
   searchTrigger.addEventListener("click", () => {
     siteHeader.classList.add("open");
     document.body.classList.add("menu-open");
-    menu?.setAttribute("aria-expanded", "true");
+    menuButton?.setAttribute("aria-expanded", "true");
     requestAnimationFrame(() => siteHeader.querySelector(".nav-search input")?.focus());
   });
   siteHeader.append(searchTrigger);
+});
+
+document.querySelectorAll(".site-header").forEach((siteHeader) => {
+  const menuButton = getOrCreateMenuButton(siteHeader);
+  menuButton?.addEventListener("click", () => {
+    const open = siteHeader.classList.toggle("open");
+    document.body.classList.toggle("menu-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+  });
 });
 
 document.querySelectorAll(".nav-inner").forEach((nav) => {
@@ -238,26 +254,24 @@ if (calligraphyCanvas) {
   source.src = "assets/hero-calligraphy-source.png";
 }
 
-menu?.addEventListener("click", () => {
-  const open = header.classList.toggle("open");
-  document.body.classList.toggle("menu-open", open);
-  menu.setAttribute("aria-expanded", String(open));
-});
-
 document.querySelectorAll(".main-nav a").forEach((link) => {
   link.addEventListener("click", () => {
-    header.classList.remove("open");
+    document.querySelectorAll(".site-header.open").forEach((siteHeader) => {
+      siteHeader.classList.remove("open");
+      siteHeader.querySelector(".menu-button")?.setAttribute("aria-expanded", "false");
+    });
     document.body.classList.remove("menu-open");
-    menu?.setAttribute("aria-expanded", "false");
   });
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape" || !header?.classList.contains("open")) return;
-  header.classList.remove("open");
+  const openHeader = document.querySelector(".site-header.open");
+  if (event.key !== "Escape" || !openHeader) return;
+  openHeader.classList.remove("open");
   document.body.classList.remove("menu-open");
-  menu?.setAttribute("aria-expanded", "false");
-  menu?.focus();
+  const menuButton = openHeader.querySelector(".menu-button");
+  menuButton?.setAttribute("aria-expanded", "false");
+  menuButton?.focus();
 });
 
 function enhanceBreadcrumbs() {
