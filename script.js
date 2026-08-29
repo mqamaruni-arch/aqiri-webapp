@@ -3,7 +3,12 @@ const header = document.querySelector(".site-header");
 function getOrCreateMenuButton(siteHeader) {
   if (!siteHeader) return null;
   let menuButton = siteHeader.querySelector(".menu-button");
-  if (menuButton) return menuButton;
+  if (menuButton) {
+    // The original control lives inside the desktop brand row. Move it beside
+    // the mobile-only controls so it is never hidden with that row on phones.
+    if (menuButton.parentElement?.classList.contains("brand-row")) siteHeader.append(menuButton);
+    return menuButton;
+  }
 
   menuButton = document.createElement("button");
   menuButton.className = "menu-button";
@@ -84,18 +89,22 @@ document.querySelectorAll(".nav-inner").forEach((nav) => {
   const prefix = nested ? "../" : "";
   const path = window.location.pathname;
   let active = "";
-  if (path.includes("/departments/")) active = "Departments";
-  else if (/board-of-governors|director-general/.test(path)) active = "About";
-  else if (/advanced-diplomas|postdoctoral-fellowships|diploma-admission-form/.test(path)) active = "Admissions";
+  if (path.includes("/departments/")) active = "Research";
+  else if (/board-of-governors|director-general|advisory-council|research-contributors|postdoctoral-fellows|administrative-staff|people/.test(path)) active = "People";
+  else if (/advanced-diplomas|postdoctoral-fellowships|diploma-admission-form/.test(path)) active = "Programs";
+  else if (path.includes("people")) active = "People";
   else if (path.includes("careers")) active = "Careers";
   else if (path.includes("manuscripts")) active = "Publications";
+  else if (path.includes("library") || path.includes("book.html")) active = "Library";
   const item = (label, href) => `<a href="${href}"${active === label ? ' class="active"' : ""}>${label}</a>`;
   nav.innerHTML = [
     item("About", `${prefix}index.html#about`),
-    item("Departments", `${prefix}departments/editorial-and-acquisitions.html`),
-    item("Publications", `${prefix}index.html#publications`),
-    item("Admissions", `${prefix}index.html#programs`),
-    item("News & Notices", `${prefix}index.html#news`),
+    item("Research", `${prefix}departments/editorial-and-acquisitions.html`),
+    '<a href="https://publications.aqiri.org">Publications</a>',
+    item("Programs", `${prefix}advanced-diplomas.html`),
+    item("Library", `${prefix}library.html`),
+    item("News & Events", `${prefix}index.html#news`),
+    item("People", `${prefix}people.html`),
     item("Careers", `${prefix}careers.html`),
     item("Contact", `${prefix}index.html#contact`)
   ].join("");
@@ -106,28 +115,38 @@ installBrandLogo();
 
 document.querySelectorAll(".site-header").forEach((siteHeader) => {
   const menuButton = getOrCreateMenuButton(siteHeader);
-  if (siteHeader.querySelector(".header-seal")) return;
   const nav = siteHeader.querySelector(".nav-inner");
   const nested = nav.querySelector("a")?.getAttribute("href")?.startsWith("../");
-  const seal = document.createElement("a");
-  seal.className = "header-seal";
-  seal.href = `${nested ? "../" : ""}index.html`;
-  seal.setAttribute("aria-label", "AQIRI home");
-  seal.innerHTML = `<img src="${nested ? "../" : ""}assets/al-qamar-seal-transparent-v3.png" alt="AQIRI seal">`;
-  siteHeader.append(seal);
-
-  const searchTrigger = document.createElement("button");
-  searchTrigger.className = "mobile-search-trigger";
-  searchTrigger.type = "button";
-  searchTrigger.setAttribute("aria-label", "Open search");
-  searchTrigger.textContent = "⌕";
-  searchTrigger.addEventListener("click", () => {
-    siteHeader.classList.add("open");
-    document.body.classList.add("menu-open");
-    menuButton?.setAttribute("aria-expanded", "true");
-    requestAnimationFrame(() => siteHeader.querySelector(".nav-search input")?.focus());
-  });
-  siteHeader.append(searchTrigger);
+  const prefix = nested ? "../" : "";
+  if (!siteHeader.querySelector(".header-seal")) {
+    const seal = document.createElement("a");
+    seal.className = "header-seal";
+    seal.href = `${prefix}index.html`;
+    seal.setAttribute("aria-label", "AQIRI home");
+    seal.innerHTML = `<img src="${prefix}assets/al-qamar-seal-transparent-v3.png" alt="AQIRI seal">`;
+    siteHeader.append(seal);
+  }
+  if (!siteHeader.querySelector(".mobile-brand-name")) {
+    const brandName = document.createElement("a");
+    brandName.className = "mobile-brand-name";
+    brandName.href = `${prefix}index.html`;
+    brandName.innerHTML = "<strong>Al Qamar</strong><span>Islamic Research Institute</span>";
+    siteHeader.append(brandName);
+  }
+  if (!siteHeader.querySelector(".mobile-search-trigger")) {
+    const searchTrigger = document.createElement("button");
+    searchTrigger.className = "mobile-search-trigger";
+    searchTrigger.type = "button";
+    searchTrigger.setAttribute("aria-label", "Open menu and search");
+    searchTrigger.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="5.8"></circle><path d="m15.2 15.2 4.4 4.4"></path></svg>';
+    searchTrigger.addEventListener("click", () => {
+      siteHeader.classList.add("open");
+      document.body.classList.add("menu-open");
+      menuButton?.setAttribute("aria-expanded", "true");
+      requestAnimationFrame(() => siteHeader.querySelector(".nav-search input")?.focus());
+    });
+    siteHeader.append(searchTrigger);
+  }
 });
 
 document.querySelectorAll(".site-header").forEach((siteHeader) => {
@@ -136,6 +155,12 @@ document.querySelectorAll(".site-header").forEach((siteHeader) => {
     const open = siteHeader.classList.toggle("open");
     document.body.classList.toggle("menu-open", open);
     menuButton.setAttribute("aria-expanded", String(open));
+    if (!open) {
+      siteHeader.querySelectorAll(".nav-dropdown.is-open").forEach((dropdown) => {
+        dropdown.classList.remove("is-open");
+        dropdown.querySelector(".nav-dropdown-toggle")?.setAttribute("aria-expanded", "false");
+      });
+    }
   });
 });
 
@@ -180,7 +205,7 @@ function installAboutSubnav() {
   });
 }
 
-installAboutSubnav();
+// About stays a single, direct link in the primary navigation.
 
 function installDepartmentSubnav() {
   document.querySelectorAll(".nav-inner > a").forEach((link) => {
@@ -204,9 +229,9 @@ function installDepartmentSubnav() {
 
 installDepartmentSubnav();
 
-function installAdmissionsSubnav() {
+function installProgramsSubnav() {
   document.querySelectorAll(".nav-inner > a").forEach((link) => {
-    if (link.textContent.trim() !== "Admissions") return;
+    if (link.textContent.trim() !== "Programs") return;
     const wrapper = document.createElement("div");
     wrapper.className = "nav-dropdown";
     link.parentNode.insertBefore(wrapper, link);
@@ -215,13 +240,61 @@ function installAdmissionsSubnav() {
     submenu.className = "nav-submenu";
     const prefix = link.getAttribute("href")?.startsWith("../") ? "../" : "";
     submenu.innerHTML = `
-      <a href="${prefix}postdoctoral-fellowships.html">Postdoctoral Fellowships</a>
-      <a href="${prefix}advanced-diplomas.html">Advanced Diplomas</a>`;
+      <a href="${prefix}advanced-diplomas.html">Diploma Programs</a>
+      <a href="${prefix}postdoctoral-fellowships.html">Postdoctoral Fellowships</a>`;
     wrapper.append(submenu);
   });
 }
 
-installAdmissionsSubnav();
+installProgramsSubnav();
+
+function installPeopleSubnav() {
+  document.querySelectorAll(".nav-inner > a").forEach((link) => {
+    if (link.textContent.trim() !== "People") return;
+    const wrapper = document.createElement("div");
+    wrapper.className = "nav-dropdown";
+    link.parentNode.insertBefore(wrapper, link);
+    wrapper.append(link);
+    const submenu = document.createElement("div");
+    submenu.className = "nav-submenu";
+    const prefix = link.getAttribute("href")?.startsWith("../") ? "../" : "";
+    submenu.innerHTML = `
+      <a href="${prefix}board-of-governors.html">Board of Governors</a>
+      <a href="${prefix}advisory-council.html">Advisory Council</a>
+      <a href="${prefix}director-general.html">Director General</a>
+      <a href="${prefix}research-contributors.html">Research Contributors</a>
+      <a href="${prefix}postdoctoral-fellows.html">Postdoctoral Fellows</a>
+      <a href="${prefix}administrative-staff.html">Administrative Staff</a>`;
+    wrapper.append(submenu);
+  });
+}
+
+installPeopleSubnav();
+
+// Keep desktop hover menus unchanged. On touch screens a separate control opens
+// child links without preventing the parent link from remaining a real link.
+document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
+  if (dropdown.querySelector(".nav-dropdown-toggle")) return;
+  const parentLink = dropdown.querySelector(":scope > a");
+  const submenu = dropdown.querySelector(":scope > .nav-submenu");
+  if (!parentLink || !submenu) return;
+  const toggle = document.createElement("button");
+  toggle.className = "nav-dropdown-toggle";
+  toggle.type = "button";
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", `Show ${parentLink.textContent.trim()} links`);
+  toggle.innerHTML = '<span aria-hidden="true">⌄</span>';
+  toggle.addEventListener("click", () => {
+    const willOpen = !dropdown.classList.contains("is-open");
+    dropdown.parentElement?.querySelectorAll(":scope > .nav-dropdown.is-open").forEach((item) => {
+      item.classList.remove("is-open");
+      item.querySelector(".nav-dropdown-toggle")?.setAttribute("aria-expanded", "false");
+    });
+    dropdown.classList.toggle("is-open", willOpen);
+    toggle.setAttribute("aria-expanded", String(willOpen));
+  });
+  dropdown.insertBefore(toggle, submenu);
+});
 
 document.querySelectorAll(".nav-inner").forEach((nav) => {
   if ([...nav.querySelectorAll("a")].some((a) => a.textContent.trim() === "Careers")) return;

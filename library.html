@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library | AQIRI</title>
+  <meta name="description" content="Browse the AQIRI Library catalogue of open-access books and scholarly publications.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="library.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+</head>
+<body class="library-page library-catalogue-page">
+  <a class="skip-link" href="#catalogue">Skip to catalogue</a>
+  <header class="site-header"><div class="shell brand-row"><a class="brand" href="index.html"><span><strong>Al-Qamar</strong><small>Islamic Research Institute</small></span></a></div><nav id="site-nav" class="main-nav" aria-label="Main navigation"><div class="shell nav-inner"></div></nav></header>
+  <main>
+    <section class="library-catalogue-hero"><div class="shell"><p class="crumb"><a href="index.html">Home</a><span>/</span> Library</p><p class="eyebrow"><span></span> AQIRI catalogue</p><h1>Library</h1><p>Browse scholarly books and open-access publications. Select a title to view its available publication details and access options.</p></div></section>
+    <section id="catalogue" class="library-catalogue-clean"><div class="shell"><div class="catalogue-search-wrap"><label for="library-search">Search the catalogue</label><div class="catalogue-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="5.8"></circle><path d="m15.2 15.2 4.4 4.4"></path></svg><input id="library-search" type="search" autocomplete="off" placeholder="Search title, author, editor, or keyword"></div><p id="library-count" aria-live="polite"></p></div><div id="library-results" class="catalogue-list" aria-live="polite"></div><p id="library-empty" class="catalogue-empty" hidden>No titles match your search. Try a title, author, editor, or subject keyword.</p></div></section>
+  </main>
+  <footer></footer>
+  <script src="script.js"></script><script src="library-batch.js"></script><script src="library-ui.js"></script>
+</body>
+</html>

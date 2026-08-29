@@ -30,3 +30,32 @@ jobs:
             **/.git*/**
             **/.github/**
             DEPLOY_NAMECHEAP.md
+
+  deploy-library-subdomain:
+    name: Upload library.aqiri.org
+    runs-on: ubuntu-latest
+    needs: deploy
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build the library subdomain package
+        run: |
+          mkdir -p library-site/assets/library library-site/assets/icons
+          cp library.html library-site/index.html
+          cp styles.css script.js library-site/
+          cp assets/library/* library-site/assets/library/
+          cp assets/icons/favicon-32x32.png library-site/assets/icons/
+          sed -i 's|href="index.html"|href="https://aqiri.org/"|g; s|href="index.html#about"|href="https://aqiri.org/#about"|g; s|href="index.html#contact"|href="https://aqiri.org/#contact"|g; s|href="library.html"|href="https://library.aqiri.org/"|g' library-site/index.html
+
+      - name: Deploy library by FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ftp.aqiri.org
+          username: ${{ secrets.NAMECHEAP_FTP_USERNAME }}
+          password: ${{ secrets.NAMECHEAP_FTP_PASSWORD }}
+          local-dir: ./library-site/
+          server-dir: ./library/
+          state-name: .ftp-deploy-library-state.json
+          timeout: 120000
