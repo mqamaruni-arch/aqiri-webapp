@@ -44,7 +44,7 @@ jobs:
         run: |
           mkdir -p library-site/assets/library library-site/assets/icons
           cp library.html library-site/index.html
-          cp styles.css script.js library-site/
+          cp styles.css script.js library.css library-batch.js library-ui.js book.html library-site/
           cp assets/library/* library-site/assets/library/
           cp assets/icons/favicon-32x32.png library-site/assets/icons/
           sed -i 's|href="index.html"|href="https://aqiri.org/"|g; s|href="index.html#about"|href="https://aqiri.org/#about"|g; s|href="index.html#contact"|href="https://aqiri.org/#contact"|g; s|href="library.html"|href="https://library.aqiri.org/"|g' library-site/index.html
