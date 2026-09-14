@@ -1,3 +1,22 @@
+function headerPathPrefix(siteHeader) {
+  if (siteHeader?.querySelector('a[href^="../"]')) return "../";
+  const stylesheet = document.querySelector('link[href$="styles.css"]')?.getAttribute("href");
+  return stylesheet?.startsWith("../") ? "../" : "";
+}
+
+function renderSharedHeaders() {
+  document.querySelectorAll(".site-header").forEach((siteHeader) => {
+    const prefix = headerPathPrefix(siteHeader);
+    siteHeader.innerHTML = `
+      <div class="shell brand-row">
+        <a class="brand" href="${prefix}index.html"><span><strong>Al-Qamar</strong><small>Islamic Research Institute</small></span></a>
+      </div>
+      <nav id="site-nav" class="main-nav" aria-label="Main navigation"><div class="shell nav-inner"></div></nav>`;
+  });
+}
+
+renderSharedHeaders();
+window.AQIRISharedHeader = true;
 const header = document.querySelector(".site-header");
 
 function getOrCreateMenuButton(siteHeader) {
@@ -21,7 +40,7 @@ function getOrCreateMenuButton(siteHeader) {
 }
 
 function getPathPrefix() {
-  return document.querySelector(".nav-inner a")?.getAttribute("href")?.startsWith("../") ? "../" : "";
+  return headerPathPrefix(document.querySelector(".site-header"));
 }
 
 function installBrandLogo() {
@@ -90,7 +109,7 @@ document.querySelectorAll(".nav-inner").forEach((nav) => {
   const path = window.location.pathname;
   let active = "";
   if (path.includes("/departments/")) active = "Research";
-  else if (/board-of-governors|director-general|advisory-council|research-contributors|postdoctoral-fellows|administrative-staff|people/.test(path)) active = "People";
+  else if (/board-of-governors|director-general|advisory-council|research-contributors|postdoctoral-fellows|administrative-staff|people|\/administration\//.test(path)) active = "People";
   else if (/advanced-diplomas|postdoctoral-fellowships|diploma-admission-form/.test(path)) active = "Programs";
   else if (path.includes("people")) active = "People";
   else if (path.includes("careers")) active = "Careers";
@@ -109,6 +128,14 @@ document.querySelectorAll(".nav-inner").forEach((nav) => {
     item("Contact", `${prefix}index.html#contact`)
   ].join("");
 });
+
+if (!document.querySelector(".site-update-ticker")) {
+  const ticker = document.createElement("aside");
+  ticker.className = "site-update-ticker";
+  ticker.setAttribute("role", "status");
+    ticker.innerHTML = '<span>Update</span><p>Our website is currently undergoing improvements, and some content is being updated. Thank you for your patience.</p>';
+  document.querySelector(".site-header")?.insertAdjacentElement("afterend", ticker);
+}
 
 renderSharedFooter();
 installBrandLogo();
@@ -262,7 +289,7 @@ function installPeopleSubnav() {
       <a href="${prefix}board-of-governors.html">Board of Governors</a>
       <a href="${prefix}advisory-council.html">Advisory Council</a>
       <a href="${prefix}director-general.html">Director General</a>
-      <a href="${prefix}research-contributors.html">Research Contributors</a>
+      <a href="${prefix}research-contributors.html">Research Fellows</a>
       <a href="${prefix}postdoctoral-fellows.html">Postdoctoral Fellows</a>
       <a href="${prefix}administrative-staff.html">Administrative Staff</a>`;
     wrapper.append(submenu);

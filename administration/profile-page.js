@@ -35,9 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
       <a href="../contact-aqiri.html">info@aqiri.org</a>
     </div>`;
 
+  if (!window.AQIRISharedHeader) {
   document.querySelectorAll(".nav-inner").forEach((nav) => {
     if (nav.parentElement && !nav.parentElement.id) nav.parentElement.id = "site-nav";
-    nav.innerHTML = '<a href="../index.html#about" class="active">About</a><a href="../departments/editorial-and-acquisitions.html">Departments</a><a href="../index.html#publications">Publications</a><a href="../index.html#programs">Admissions</a><a href="../index.html#news">News &amp; Notices</a><a href="../careers.html">Careers</a><a href="../index.html#contact">Contact</a>';
+    nav.innerHTML = '<a href="../index.html#about">About</a><a href="../departments/editorial-and-acquisitions.html">Research</a><a href="https://publications.aqiri.org">Publications</a><a href="../advanced-diplomas.html">Programs</a><a href="../library.html">Library</a><a href="../index.html#news">News &amp; Events</a><a href="../people.html" class="active">People</a><a href="../careers.html">Careers</a><a href="../index.html#contact">Contact</a>';
   });
   document.querySelectorAll("footer").forEach((footer) => {
     footer.classList.add("site-footer");
@@ -75,8 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchTrigger = document.createElement("button");
     searchTrigger.className = "mobile-search-trigger";
     searchTrigger.type = "button";
-    searchTrigger.setAttribute("aria-label", "Open search");
-    searchTrigger.textContent = "⌕";
+    searchTrigger.setAttribute("aria-label", "Open menu and search");
+    searchTrigger.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="5.8"></circle><path d="m15.2 15.2 4.4 4.4"></path></svg>';
     searchTrigger.addEventListener("click", () => {
       siteHeader.classList.add("open");
       document.body.classList.add("menu-open");
@@ -84,6 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(() => siteHeader.querySelector(".nav-search input")?.focus());
     });
     siteHeader.append(searchTrigger);
+    const brandName = document.createElement("a");
+    brandName.className = "mobile-brand-name";
+    brandName.href = "../index.html";
+    brandName.innerHTML = "<strong>Al Qamar</strong><span>Islamic Research Institute</span>";
+    siteHeader.append(brandName);
     menuButton.addEventListener("click", () => {
       const open = siteHeader.classList.toggle("open");
       document.body.classList.toggle("menu-open", open);
@@ -125,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     submenu.innerHTML = '<a href="../departments/editorial-and-acquisitions.html">Editorial &amp; Acquisitions</a><a href="../departments/production-and-publishing-operations.html">Production &amp; Publishing Operations</a><a href="../departments/communications-and-public-relations.html">Communications &amp; Public Relations</a><a href="../departments/digital-platform-technology.html">Digital Platform Technology</a><a href="../departments/compliance-and-human-resource.html">Compliance &amp; Human Resource</a>';
     wrapper.append(submenu);
   });
+  }
   const year = document.querySelector("#year");
   if (year) year.textContent = new Date().getFullYear();
   document.querySelectorAll("a, button").forEach((control) => {
@@ -141,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.querySelectorAll(".crumb").forEach((source) => {
+  if (source.matches("nav")) return;
   const items = [];
   source.childNodes.forEach((node) => {
     const text = node.textContent.trim();

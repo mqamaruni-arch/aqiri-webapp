@@ -2,7 +2,7 @@ document.querySelector("#profile-shell").innerHTML = `
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell brand-row"><a class="brand" href="../index.html"><img src="../assets/al-qamar-seal-transparent-v3.png" alt="AQIRI logo"><span><strong>Al-Qamar</strong><small>Islamic Research Institute</small></span></a></div>
-    <nav class="main-nav"><div class="shell nav-inner"><a href="../index.html">Home</a><a href="../index.html#about">About</a><a href="../board-of-governors.html" data-board-nav>Board of Governors</a><a href="../director-general.html" data-director-nav>Director General</a><a href="../index.html#departments">Departments</a><a href="../index.html#publications">Publications</a><a href="../index.html#contact">Contact</a></div></nav>
+    <nav id="site-nav" class="main-nav" aria-label="Main navigation"><div class="shell nav-inner"></div></nav>
   </header>
   <main id="main">
     <section class="profile-hero"><div class="shell">
