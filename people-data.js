@@ -11,6 +11,9 @@ const aqiriPeople = [
   ["emiola-habeeb", "Emiola Habeeb", "Research Fellow", "M.A. candidate in Sociology of Religion", "Necmettin Erbakan University, Türkiye", "assets/emiola-habeeb.jpg"],
   ["abba-a-dandago", "Abba A. Dandago", "Research Fellow", "PhD Candidate", "Yusuf Maitama Sule University, Kano, Nigeria", "assets/abba-a-dandago.png"],
   ["shadeka-jannat", "Shadeka Jannat", "Research Fellow", "Adjunct Lecturer in Islamic Studies; PhD Candidate in Arabic", "International Islamic University Chittagong & University of Chittagong, Bangladesh", "assets/shadeka-jannat.png"],
+  ["ibraheem-abdulwahab-abdulkareem", "Ibraheem Abdulwahab Abdulkareem", "Research Fellow", "Academic Researcher in Islamic Jurisprudence and Islamic Finance", "Université Sidi Mohamed Ben Abdellah, Fès, Morocco", "assets/ibraheem-abdulwahab-abdulkareem.png"],
+  ["dr-idris-abdur-rahman", "Dr. Idris Abdur-Rahman", "Research Fellow", "Lecturer; Executive Secretary", "Islamic University of Minnesota, USA & Daaru Na‘im Academy for Islamic Sciences, Nigeria", "assets/dr-idris-abdur-rahman.jpg"],
+  ["dr-ade-jamarudin", "Dr. Ade Jamarudin", "Research Fellow", "Lecturer in Islamic Family Law, Qur’anic Sciences and Islamic Jurisprudence", "Universitas Islam Negeri Sunan Gunung Djati Bandung, Indonesia", "assets/dr-ade-jamarudin.jpg"],
   ["muhammad-raza", "Muhammad Raza", "Independent Graphic & UI/UX Designer", "Graphic & UI/UX Designer", "Independent Professional"],
   ["hafiz-awais-qaisar", "Hafiz Awais Qaisar", "Visual Communication Designer", "Graphic Design and Visual Communication Professional", "Independent Professional"],
   ["mariam-khalid", "Mariam Khalid", "Senior Graphic Designer", "Graphic Designer and UI/UX Specialist", "Independent Professional"],
@@ -50,13 +53,29 @@ const aqiriPeopleBios = {
     "She holds an MA and a BA (Honours) in Da'wah and Islamic Studies from International Islamic University Chittagong, both achieved with first-class, first-position results and Gold Medal recognition. She also holds an MA in Kamil (Hadith) from Islamic University Kushtia, and has received Chancellor and Vice-Chancellor Awards and top NTRCA examination merits.",
     "Her research interests include Islamic ethics and contemporary issues, Islamic education and curriculum development, fiqh and social justice, da'wah methodology, and Islamic history and civilisation. Her peer-reviewed work addresses digital evidence in Islamic law, technology in Arabic teaching, social media in da'wah, and Qur'anic concepts in early-childhood development.",
     "Skilled in curriculum design, outcome-based education principles, and technology-integrated pedagogy, she is committed to supportive learning environments and ethical leadership through education."
+  ],
+  "ibraheem-abdulwahab-abdulkareem": [
+    "Ibraheem Abdulwahab Abdulkareem is an academic researcher specialising in Islamic jurisprudence, Islamic finance, and historical legal frameworks. He holds an MA in Sharia Studies and Islamic Finance and is affiliated with Université Sidi Mohamed Ben Abdellah, Fès.",
+    "His postgraduate research examined micro-takaful and its application within the informal sector. His earlier academic work involved comparative textual analysis of classical Islamic commercial jurisprudence (Fiqh al-Mu‘amalat).",
+    "His research interests include fiqh, usul al-fiqh, maqasid al-Shariah, Islamic economics, finance, and business ethics. His wider interests cover Islam and governance, political thought, historical systems of economic administration, Qur’anic studies, tafsir, Hadith and Sunnah studies, and the Prophetic biography.",
+    "Alongside his research, he has experience in manuscript evaluation, structural formatting, academic proofreading, peer review, and the organisation of academic conferences and seminars. His current work explores connections between classical Islamic texts and contemporary socio-economic questions. At AQIRI, he contributes this interdisciplinary background to research and academic publishing activities in Islamic Studies."
+  ],
+  "dr-idris-abdur-rahman": [
+    "Dr. Idris Abdur-Rahman is an Islamic scholar, researcher, and educator specialising in fiqh and usul al-fiqh. He holds a PhD and a master's degree in fiqh and usul al-fiqh, as well as a bachelor's degree in Islamic Studies (Shari‘ah). He has also completed professional certifications in Islamic finance, maqasid al-Shari‘ah, Islamic estate distribution, waqf, and related areas.",
+    "He serves as a Lecturer at the Islamic University of Minnesota, USA, and as Executive Secretary of Daaru Na‘im Academy for Islamic Sciences, Nigeria. His teaching experience covers fiqh, usul al-fiqh, Hadith, usul al-Hadith, Islamic inheritance, Arabic, and other Islamic sciences. He previously worked as a Researcher and Trainer at the Da‘wah Institute of the Islamic Education Trust.",
+    "His research interests include Islamic jurisprudence, maqasid al-Shari‘ah, Islamic legal maxims, inheritance and estate distribution, Islamic finance, and contemporary applications of Shari‘ah. He has written and published in English and Arabic on Islamic law, inheritance, usul al-fiqh, logic, Islamic education, Muslim relations, and contemporary social questions."
+  ],
+  "dr-ade-jamarudin": [
+    "Dr. Ade Jamarudin is an Indonesian scholar and university lecturer specialising in Islamic Family Law, Qur’anic Sciences, and Islamic Jurisprudence. He earned his doctorate in Islamic Family Law from Universitas Islam Negeri Sultan Syarif Kasim Riau in 2020 and serves at Universitas Islam Negeri Sunan Gunung Djati Bandung, Indonesia.",
+    "His research examines the development and application of Islamic Family Law, with particular attention to Indonesia and Pakistan. He has extensive experience in academic writing and research.",
+    "He has contributed to national and international scholarly journals, including Scopus-indexed publications. At AQIRI, he contributes his expertise in Islamic Family Law, Qur’anic studies, and Islamic jurisprudence to research and academic publishing activities."
   ]
 };
 
 const peopleGrid = document.querySelector("#people-grid");
 if (peopleGrid) {
   peopleGrid.innerHTML = aqiriPeople.map(([slug, name, role, title, affiliation, photo]) => `
-    <article class="staff-card">
+    <article class="staff-card" data-person="${slug}">
       ${photo ? `<img class="staff-photo" src="${photo}" alt="${name}">` : '<div class="staff-photo-placeholder">Photo forthcoming</div>'}
       <span>${role}</span>
       <h4>${name}</h4>
