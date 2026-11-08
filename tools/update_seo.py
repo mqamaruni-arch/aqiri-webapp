@@ -11,7 +11,7 @@ ORG = 'Al-Qamar Islamic Research Institute'
 LOGO = BASE + '/assets/al-qamar-seal-transparent-v3.png'
 NOINDEX = {'book.html','person-profile.html','on-work-2026-01-registration.html','diploma-admission-form.html','report-security-issue.html','report-copyright-infringement.html','conferences.html','advisory-council.html','postdoctoral-fellows.html'}
 COPY = {
- 'who-owns-the-sky.html': ('Who Owns the Sky? Islamic Jurisprudence Research | AQIRI', 'AQIRI research on Islamic jurisprudence, orbital commons, space law, and geoengineering governance. Read the abstract for project 1009/AQIRI/2026.'),
+ 'who-owns-the-sky.html': ('Who Owns the Sky? Islamic Jurisprudence Research | AQIRI', 'Research Fellow Emiola Habeeb explores Islamic jurisprudence and celestial commons at AQIRI. Research begins 15 November 2026. Project 1009/AQIRI/2026.'),
  'index.html': ('AQIRI | Islamic Research Institute in Lahore', 'Al-Qamar Islamic Research Institute (AQIRI), Lahore, supports Islamic Studies through research, scholarly publications, advanced diplomas, and online workshops.'),
  'advanced-diplomas.html': ('Advanced Diplomas: Fall 2026 Admissions | AQIRI', 'Apply by 30 November 2026 for AQIRI advanced diplomas in Arabic language and Islamic texts, or academic research and scholarly writing. Spring and Fall intakes.'),
  'on-work-2026-01.html': ('Research Methods in Islamic Studies Workshop | AQIRI', 'Join AQIRI’s online Islamic Studies research workshop on 21–22 November 2026, 8–11 p.m. Pakistan time. Topic selection, proposals, theses, and articles. PKR 2,000.'),
