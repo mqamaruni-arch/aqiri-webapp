@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /private-workshop-data/
+Disallow: /workshop-register.php
+Disallow: /seo-record.php
+Disallow: /tools/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.vscode/
 
-Sitemap: https://aqiri.org/sitemap.xml
+Sitemap: https://www.aqiri.org/sitemap.xml

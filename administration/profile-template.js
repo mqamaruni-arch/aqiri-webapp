@@ -7,7 +7,7 @@ document.querySelector("#profile-shell").innerHTML = `
   <main id="main">
     <section class="profile-hero"><div class="shell">
       <p class="crumb"><a href="../index.html">Home</a><span>/</span><a href="../board-of-governors.html" data-profile-parent>Board of Governors</a><span>/</span><span data-name></span></p>
-      <div class="profile-hero-grid"><div><p class="eyebrow"><span></span> Board Member</p><h1 data-name></h1><p class="profile-institution" data-institution></p></div><img data-photo alt=""></div>
+      <div class="profile-hero-grid"><div><p class="eyebrow" data-profile-kind><span></span> Board Member</p><h1 data-name></h1><p class="profile-institution" data-institution></p></div><img data-photo alt=""></div>
     </div></section>
     <section class="section profile-content"><div class="shell profile-content-grid">
       <article><p class="eyebrow dark"><span></span> Profile</p><div class="profile-prose" data-bio></div>

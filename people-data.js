@@ -1,4 +1,5 @@
 const aqiriPeople = [
+  ["vk-muhammad-qamar-khan", "VK. Muhammad Qamar Khan", "Research Fellow & Adjunct Admin Officer", "Administrative Office, Establishment I & II", "Al-Qamar Islamic Research Institute, Lahore"],
   ["dr-hafiz-muhammad-hassan", "Dr. Hafiz Muhammad Hassan", "Research Fellow", "Assistant Professor, Department of Islamic Studies", "University of Sargodha, Sargodha, Pakistan"],
   ["dr-hafiz-abdul-jalil-tabassum", "Dr. Hafiz Abdul Jalil Tabassum", "Editorial Officer", "Editorial & Acquisitions Department", "Al-Qamar Islamic Research Institute (AQIRI)"],
   ["prof-dr-mohd-roslan-bin-mohd-nor", "Prof. Dr. Mohd Roslan Bin Mohd Nor", "Research Fellow", "Professor of Islamic History and Civilization", "University of Malaya, Kuala Lumpur, Malaysia"],
@@ -7,7 +8,7 @@ const aqiriPeople = [
   ["dr-muhammad-iqbal", "Dr. Muhammad Iqbal", "Research Fellow", "Assistant Professor, Department of Arabic", "National University of Modern Languages, Islamabad, Pakistan"],
   ["dr-hafiz-zakariya", "Dr. Hafiz Zakariya", "Research Fellow", "Deputy Vice-Chancellor for Student Affairs and Alumni", "University of Malaysia Terengganu, Malaysia"],
   ["prof-dr-muhammad-saad-siddiqui", "Prof. Dr. Muhammad Saad Siddiqui", "Research Fellow", "Professor and Director, Institute of Islamic Studies", "University of the Punjab, Lahore, Pakistan"],
-  ["dr-hafiz-muhammad-naeem", "Dr. Hafiz Muhammad Naeem", "Research Fellow", "Chairman, Department of Islamic Studies", "Government College University, Lahore, Pakistan"],
+  ["dr-hafiz-muhammad-naeem", "Dr. Hafiz Muhammad Naeem", "Workshop Speaker", "Chairperson, Department of Arabic and Islamic Studies", "Government College University, Lahore, Pakistan", "assets/dr-hafiz-muhammad-naeem.jpg"],
   ["emiola-habeeb", "Emiola Habeeb", "Research Fellow", "M.A. candidate in Sociology of Religion", "Necmettin Erbakan University, Türkiye", "assets/emiola-habeeb.jpg"],
   ["abba-a-dandago", "Abba A. Dandago", "Research Fellow", "PhD Candidate", "Yusuf Maitama Sule University, Kano, Nigeria", "assets/abba-a-dandago.png"],
   ["shadeka-jannat", "Shadeka Jannat", "Research Fellow", "Adjunct Lecturer in Islamic Studies; PhD Candidate in Arabic", "International Islamic University Chittagong & University of Chittagong, Bangladesh", "assets/shadeka-jannat.png"],
@@ -72,18 +73,6 @@ const aqiriPeopleBios = {
   ]
 };
 
-const peopleGrid = document.querySelector("#people-grid");
-if (peopleGrid) {
-  peopleGrid.innerHTML = aqiriPeople.map(([slug, name, role, title, affiliation, photo]) => `
-    <article class="staff-card" data-person="${slug}">
-      ${photo ? `<img class="staff-photo" src="${photo}" alt="${name}">` : '<div class="staff-photo-placeholder">Photo forthcoming</div>'}
-      <span>${role}</span>
-      <h4>${name}</h4>
-      <p>${title}<br>${affiliation}</p>
-      <a href="person-profile.html?person=${encodeURIComponent(slug)}">View full profile <b>→</b></a>
-    </article>`).join("");
-}
-
 const profileRoot = document.querySelector("#person-profile");
 if (profileRoot) {
   const slug = new URLSearchParams(window.location.search).get("person");
@@ -91,9 +80,12 @@ if (profileRoot) {
   if (person) {
     const [id, name, role, title, affiliation, photo] = person;
     const bio = aqiriPeopleBios[id];
+    const administrativeSlugs = ["vk-muhammad-qamar-khan", "dr-abdul-basit", "moqadus-habiba", "dr-loqman-ahmad", "dr-amjad-hussain", "dr-memoona-rafi-bajwa"];
+    const backUrl = role === "Workshop Speaker" ? "on-work-2026-01.html" : administrativeSlugs.includes(id) ? "administrative-staff.html" : /Research Fellow/.test(role) ? "research-contributors.html" : "index.html#administration";
+    const backLabel = role === "Workshop Speaker" ? "Back to Workshop" : administrativeSlugs.includes(id) ? "Back to Administrative Staff" : /Research Fellow/.test(role) ? "Back to Research Fellows" : "Back to Institute Leadership";
     document.title = `${name} | AQIRI`;
-    profileRoot.innerHTML = `${photo ? `<img class="profile-page-photo" src="${photo}" alt="${name}">` : ""}<p class="eyebrow dark"><span></span>${role}</p><h1>${name}</h1><p class="profile-role">${title}</p><p class="profile-affiliation">${affiliation}</p>${bio ? bio.map((paragraph) => `<p>${paragraph}</p>`).join("") : `<p>This profile records ${name}'s contribution to Al-Qamar Islamic Research Institute.</p>`}<a class="button button-green" href="people.html">Back to People <span>←</span></a>`;
+    profileRoot.innerHTML = `${photo ? `<img class="profile-page-photo" src="${photo}" alt="${name}">` : ""}<p class="eyebrow dark"><span></span>${role}</p><h1>${name}</h1><p class="profile-role">${title}</p><p class="profile-affiliation">${affiliation}</p>${bio ? bio.map((paragraph) => `<p>${paragraph}</p>`).join("") : `<p>This profile records ${name}'s contribution to Al-Qamar Islamic Research Institute.</p>`}<a class="button button-green" href="${backUrl}">${backLabel} <span>←</span></a>`;
   } else {
-    profileRoot.innerHTML = `<p class="eyebrow dark"><span></span>People</p><h1>Profile unavailable</h1><p>The requested profile could not be found.</p><a class="button button-green" href="people.html">Back to People <span>←</span></a>`;
+    profileRoot.innerHTML = `<p class="eyebrow dark"><span></span>People</p><h1>Profile unavailable</h1><p>The requested profile could not be found.</p><a class="button button-green" href="index.html">Back to Home <span>←</span></a>`;
   }
 }

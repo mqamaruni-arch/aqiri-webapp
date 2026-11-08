@@ -1,0 +1,67 @@
+/* Research Methods in Islamic Studies — 21–22 November 2026 */
+.workshop-page h2{font:400 clamp(32px,4vw,46px)/1.15 var(--serif);color:var(--green);margin:0 0 24px}
+.workshop-hero,.workshop-registration{background:var(--green);color:#fff;padding:45px 0 65px}
+.workshop-hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:65px;align-items:center}
+.workshop-institute{font-size:12px;letter-spacing:.07em;color:#c5d6df;max-width:480px}
+.workshop-hero h1{font:400 clamp(45px,5.5vw,72px)/1.06 var(--serif);letter-spacing:-.025em;margin:22px 0}
+.workshop-hero h1 em{font-style:normal;color:#91c4b5}
+
+.workshop-facts{border:1px solid #41596b;padding:8px 28px;background:#ffffff06}
+.workshop-facts dl{margin:0}.workshop-facts dl>div{padding:17px 0;border-bottom:1px solid #41596b}.workshop-facts dl>div:last-child{border:0}
+.workshop-facts dt{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:#91c4b5;margin-bottom:5px}
+.workshop-facts dd{margin:0;font-size:18px}.workshop-facts small{display:block;font-size:12px;color:#cfdae2;margin-top:4px}
+.workshop-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:35px}.workshop-page button{font-family:inherit;white-space:normal;text-align:center}
+.workshop-page button:disabled{cursor:default;opacity:.7}.workshop-pending{font-size:12px;color:#cfdae2;margin-top:12px}.workshop-pending p{margin:3px 0}
+.workshop-intro{display:grid;grid-template-columns:1fr 1.35fr;gap:80px}.workshop-intro p{margin-top:0;color:var(--muted)}
+.workshop-intro h3{font:400 28px var(--serif);color:var(--green);margin:30px 0 12px}
+.workshop-learning,.workshop-audience{background:var(--cream)}
+.workshop-cards{list-style:none;padding:0;margin:35px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.workshop-cards li{padding:30px;background:#fff;border:1px solid var(--line)}
+.workshop-cards span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#24634f}
+.workshop-cards h3,.workshop-scholars h3{font:400 28px/1.2 var(--serif);color:var(--green);margin:18px 0 12px}
+.workshop-cards p,.workshop-scholars p{color:var(--muted);margin:0}
+.workshop-scholars{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:40px}
+.workshop-scholars article{border-top:3px solid var(--gold);padding:10px 0}.workshop-scholars strong{display:block;margin-top:14px;font-size:13px;color:var(--green)}
+.workshop-registration{padding:75px 0}.workshop-registration h2{color:#fff}.workshop-registration p:not(.eyebrow){max-width:740px}.workshop-registration .button{margin-top:15px}
+@media(max-width:800px){.workshop-hero-grid,.workshop-intro{grid-template-columns:1fr;gap:28px}.workshop-scholars{grid-template-columns:1fr;gap:24px}.workshop-hero .crumb{flex-wrap:wrap}.workshop-actions{align-items:stretch;flex-direction:column}.workshop-cards{grid-template-columns:1fr}.workshop-facts{padding:5px 22px}}
+
+.workshop-portrait{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:center top;background:var(--cream)}
+
+.workshop-scholars article{min-width:0}.workshop-scholars h3{margin-top:20px}
+
+
+.workshop-portrait-azhari{object-position:70% top}
+
+.workshop-cards li>p{margin-top:16px}.workshop-cards p strong{color:var(--green)}
+
+.workshop-form{margin-top:35px;padding:32px;background:#fff;color:var(--ink);max-width:850px}
+.workshop-form h3{font:400 30px var(--serif);margin:0 0 12px;color:var(--green)}
+.workshop-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:24px 0}
+.workshop-form label{font-size:14px;font-weight:500}.workshop-form-grid label{display:block;margin-bottom:7px}
+.workshop-form-grid input,.workshop-form select{display:block;width:100%;min-width:0;padding:12px;border:1px solid #a9b8bf;border-radius:0;background:#fff;color:var(--ink);font:inherit;min-height:48px}
+.workshop-form input:focus-visible,.workshop-form select:focus-visible{outline:3px solid #21705d;outline-offset:2px}
+.workshop-form-wide{grid-column:1/-1}.workshop-consent{display:flex;gap:12px;align-items:flex-start}.workshop-consent input{margin-top:5px;flex-shrink:0}
+.workshop-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+#registration-status{font-weight:500;overflow-wrap:anywhere}
+@media(max-width:600px){.workshop-form{padding:24px 18px}.workshop-form-grid{grid-template-columns:1fr}}
+
+.registration-page-title{font:400 clamp(38px,5vw,62px)/1.1 var(--serif);margin:0 0 24px}
+
+/* Workshop enquiries sit above the standard shared footer. */
+.workshop-office-contact{background:#071c32;color:#c4d2dc;padding:64px 0}
+.workshop-office-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;align-items:start}
+.workshop-office-contact h2{font:400 34px/1.15 var(--serif);color:#fff;margin:0 0 16px}
+.workshop-office-contact p{font-size:13px;margin:12px 0}
+.workshop-contact-office h3{font-size:18px;color:#fff;margin:0 0 8px}
+.workshop-contact-office>span{display:block;font-size:12px;margin-bottom:12px}
+.workshop-contact-office a{font-size:16px;color:#b7dfd2;overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:4px}
+.workshop-contact-office a:hover{color:#fff}
+@media(max-width:800px){.workshop-office-grid{grid-template-columns:1fr;gap:30px}}
+
+.workshop-form h2{font:400 32px/1.2 var(--serif);color:var(--green);margin:0 0 16px}
+.workshop-form-grid small{display:block;margin-top:8px;color:var(--muted);font-size:12px}
+.workshop-form-grid label span{font-weight:400;color:var(--muted)}
+.registration-feedback{margin-top:22px;padding:18px 20px;line-height:1.65;white-space:pre-line;border-left:4px solid #41798a;background:#edf4f7;color:#183c4c}
+.registration-feedback[data-state="success"]{background:#e7f3ed;border-color:#21705d;color:#184e3f}
+.registration-feedback[data-state="error"]{background:#fff0ee;border-color:#a3342b;color:#79261f}
+.workshop-form [aria-invalid="true"]{border-color:#a3342b;outline-color:#a3342b}

@@ -1,2 +1,13 @@
 .DS_Store
 Thumbs.db
+
+/private-workshop-data/*.csv
+
+__pycache__/
+*.py[cod]
+.vscode/
+
+/library-site/
+
+/private-workshop-data/*.lock
+/private-workshop-data/.registration-*

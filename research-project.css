@@ -1,0 +1,20 @@
+/* Featured research and full abstract. */
+.research-featured{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);background:#fff;border:1px solid var(--line);margin:32px 0 70px}
+.research-featured-image{display:block;background:#060715;overflow:hidden}
+.research-featured-image img{width:100%;height:100%;min-height:380px;object-fit:cover}
+.research-featured-copy{padding:40px;align-self:center;min-width:0}
+.research-featured h3{font:400 clamp(34px,4vw,48px)/1.1 var(--serif);color:var(--green);margin:0 0 15px}
+.research-featured-subtitle{font-size:18px!important;font-weight:500;color:var(--green)!important}
+.research-featured-copy>p{color:var(--muted);font-size:14px}
+.research-featured small{display:block;margin:20px 0;color:var(--muted);font-size:11px}
+.research-project-hero{padding:50px 0 65px;background:#071c32;color:#fff}
+.research-project-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+.research-project-hero h1{font:400 clamp(52px,7vw,90px)/.98 var(--serif);margin:0 0 28px;letter-spacing:-.025em}
+.research-project-subtitle{font:400 clamp(24px,3vw,34px)/1.3 var(--serif);color:#b9d9d0;max-width:620px}
+.research-project-document{font-size:12px;color:#bccbd5;line-height:1.8;margin-top:28px}
+.research-project-hero-grid>img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.research-project-abstract>.shell{max-width:850px}
+.research-project-abstract h2{font:400 44px/1.2 var(--serif);color:var(--green);margin:0 0 28px}
+.research-project-abstract p,.research-project-arguments{font-size:17px;line-height:1.85;color:#475963}
+.research-project-arguments{padding-left:28px;margin:30px 0}.research-project-arguments li{padding:10px 0 15px 8px}.research-project-arguments strong{color:var(--green)}
+@media(max-width:800px){.research-featured,.research-project-hero-grid{grid-template-columns:1fr;gap:0}.research-featured-image img{min-height:0;height:auto;max-height:400px;object-fit:cover}.research-featured-copy{padding:28px}.research-project-hero-grid{gap:32px}.research-project-hero{padding:36px 0 48px}.research-project-hero-grid>img{max-width:520px}.research-project-abstract p,.research-project-arguments{font-size:16px}}

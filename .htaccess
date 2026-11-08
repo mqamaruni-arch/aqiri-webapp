@@ -1,5 +1,38 @@
+# Use one public HTTPS host; leave localhost and the library subdomain alone.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?aqiri\.org$ [NC]
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^aqiri\.org$ [NC]
+  RewriteRule ^ https://www.aqiri.org%{REQUEST_URI} [R=301,L,NE]
+  RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
+  # Keep existing public query URLs while serving readable initial HTML.
+  RewriteRule ^(?:book|person-profile)\.html$ seo-record.php [END]
+</IfModule>
+
 <IfModule mod_headers.c>
   <FilesMatch "\.(css|js)$">
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
+</IfModule>
+
+# Preserve old department URLs after retiring the department pages.
+<IfModule mod_alias.c>
+  RedirectMatch 301 ^/departments/[^/]+\.html$ /index.html#departments
+</IfModule>
+
+# The People main tab is now a menu control, not a separate landing page.
+<IfModule mod_alias.c>
+  RedirectMatch 301 ^/people\.html$ /research-contributors.html
+</IfModule>
+
+# Preserve download behaviour for shared PDFs used by the library subdomain.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{QUERY_STRING} (^|&)download=1(&|$)
+  RewriteRule \.pdf$ - [E=AQIRI_DOWNLOAD:1]
+</IfModule>
+<IfModule mod_headers.c>
+  Header set Content-Disposition "attachment" env=AQIRI_DOWNLOAD
 </IfModule>

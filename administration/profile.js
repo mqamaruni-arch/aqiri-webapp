@@ -1,6 +1,6 @@
 const profiles = {
   "shahbaz-khan-manj": {
-    name: "Prof. Dr. Shahbaz Khan Manj",
+    name: "Prof. Dr. Muhammad Shahbaz Khan Manj",
     institution: "Director General, Al-Qamar Islamic Research Institute",
     image: "../assets/prof-dr-shahbaz-khan-manj.jpg",
     bio: [
@@ -111,18 +111,14 @@ if (profile) {
   const isDirector = document.body.dataset.profile === "shahbaz-khan-manj";
   const parentLink = document.querySelector("[data-profile-parent]");
   const backLink = document.querySelector("[data-profile-back]");
-  const boardNav = document.querySelector("[data-board-nav]");
-  const directorNav = document.querySelector("[data-director-nav]");
   if (isDirector) {
     parentLink.href = "../director-general.html";
     parentLink.textContent = "Director General";
     backLink.href = "../director-general.html";
     backLink.textContent = "← Back to Director General";
-    directorNav.classList.add("active");
-  } else {
-    boardNav.classList.add("active");
   }
-  document.title = `${profile.name} | Al-Qamar Islamic Research Institute`;
+  document.querySelector("[data-profile-kind]").innerHTML = `<span></span> ${isDirector ? "Director General" : "Board Member"}`;
+  document.title = `${profile.name} | AQIRI`;
   document.querySelectorAll("[data-name]").forEach((el) => el.textContent = profile.name);
   document.querySelector("[data-institution]").textContent = profile.institution;
   const image = document.querySelector("[data-photo]");
