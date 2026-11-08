@@ -11,7 +11,6 @@
 .research-project-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
 .research-project-hero h1{font:400 clamp(52px,7vw,90px)/.98 var(--serif);margin:0 0 28px;letter-spacing:-.025em}
 .research-project-subtitle{font:400 clamp(24px,3vw,34px)/1.3 var(--serif);color:#b9d9d0;max-width:620px}
-.research-project-document{font-size:12px;color:#bccbd5;line-height:1.8;margin-top:28px}
 .research-project-hero-grid>img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
 .research-project-abstract>.shell{max-width:850px}
 .research-project-abstract h2{font:400 44px/1.2 var(--serif);color:var(--green);margin:0 0 28px}
