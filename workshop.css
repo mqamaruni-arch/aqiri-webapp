@@ -65,3 +65,7 @@
 .registration-feedback[data-state="success"]{background:#e7f3ed;border-color:#21705d;color:#184e3f}
 .registration-feedback[data-state="error"]{background:#fff0ee;border-color:#a3342b;color:#79261f}
 .workshop-form [aria-invalid="true"]{border-color:#a3342b;outline-color:#a3342b}
+
+.workshop-actions .workshop-brochure-button{background:#f3f5f5;color:#071c32;border:1px solid #f3f5f5}
+.workshop-actions .workshop-brochure-button:hover{background:#fff;color:#071c32;border-color:#fff}
+.workshop-actions .workshop-brochure-button:focus-visible{outline:2px solid #fff;outline-offset:4px}

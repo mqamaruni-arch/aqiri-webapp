@@ -11,6 +11,9 @@ ORG = 'Al-Qamar Islamic Research Institute'
 LOGO = BASE + '/assets/al-qamar-seal-transparent-v3.png'
 NOINDEX = {'book.html','person-profile.html','on-work-2026-01-registration.html','diploma-admission-form.html','report-security-issue.html','report-copyright-infringement.html','conferences.html','advisory-council.html','postdoctoral-fellows.html'}
 COPY = {
+ 'research.html': ('Research Projects | AQIRI', 'Explore AQIRI research projects on Islamic economic resources, celestial commons, and halal certification in Nigeria.'),
+ 'halal-certification-nigeria.html': ('Halal Certification in Nigeria Research | AQIRI', 'Research Fellow Abba A. Dandago examines halal certification, Shari’a regulations, awareness, and economic implications in Nigeria at AQIRI.'),
+ 'economic-resources-islamic-state.html': ('Islamic State Economic Resources Research | AQIRI', 'Research Fellow Ibraheem Abdulwahab Abdulkareem studies kharāj, siyāsah sharʿiyyah, and comprehensive development in the modern state at AQIRI.'),
  'who-owns-the-sky.html': ('Who Owns the Sky? Islamic Jurisprudence Research | AQIRI', 'Research Fellow Emiola Habeeb explores Islamic jurisprudence and celestial commons at AQIRI. Research begins 15 November 2026.'),
  'index.html': ('AQIRI | Islamic Research Institute in Lahore', 'Al-Qamar Islamic Research Institute (AQIRI), Lahore, supports Islamic Studies through research, scholarly publications, advanced diplomas, and online workshops.'),
  'advanced-diplomas.html': ('Advanced Diplomas: Fall 2026 Admissions | AQIRI', 'Apply by 30 November 2026 for AQIRI advanced diplomas in Arabic language and Islamic texts, or academic research and scholarly writing. Spring and Fall intakes.'),
@@ -81,6 +84,8 @@ def metadata(path, source):
     elif path in ['contact-aqiri.html','location-and-directions.html']:page_type='ContactPage'
     elif path=='director-general.html':image=BASE+'/assets/prof-dr-shahbaz-khan-manj.jpg'
     elif path=='who-owns-the-sky.html':image=BASE+'/assets/research-celestial-commons-pegasus.webp'
+    elif path=='halal-certification-nigeria.html':image=BASE+'/assets/research-halal-certification-nigeria.jpg'
+    elif path=='economic-resources-islamic-state.html':image=BASE+'/assets/research-islamic-economic-resources-marketplace.jpg'
     graph=[organization()]
     if path=='index.html':graph.append({'@type':'WebSite','@id':BASE+'/#website','url':BASE+'/','name':ORG,'alternateName':'AQIRI','publisher':{'@id':BASE+'/#organization'}})
     webpage={'@type':page_type,'@id':canonical+'#webpage','url':canonical,'name':title,'description':desc,'isPartOf':{'@id':BASE+'/#website'},'publisher':{'@id':BASE+'/#organization'},'inLanguage':'en','primaryImageOfPage':{'@type':'ImageObject','url':image}}
@@ -90,6 +95,8 @@ def metadata(path, source):
         if path.startswith('administration/'):
             director='shahbaz-khan-manj' in path
             crumbs.append({'@type':'ListItem','position':2,'name':'Director General' if director else 'Board of Governors','item':BASE+('/director-general.html' if director else '/board-of-governors.html')})
+        elif path in ['economic-resources-islamic-state.html','who-owns-the-sky.html','halal-certification-nigeria.html']:
+            crumbs.append({'@type':'ListItem','position':2,'name':'Research','item':BASE+'/research.html'})
         elif path in ['board-of-governors.html','director-general.html']:
             crumbs.append({'@type':'ListItem','position':2,'name':'Institute Leadership','item':BASE+'/#administration'})
         crumbs.append({'@type':'ListItem','position':len(crumbs)+1,'name':title.split(' | ')[0],'item':canonical})

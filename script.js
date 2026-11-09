@@ -110,7 +110,8 @@ document.querySelectorAll(".nav-inner").forEach((nav) => {
   const prefix = getPathPrefix();
   const path = window.location.pathname;
   let active = "";
-  if (/board-of-governors|director-general|advisory-council|\/administration\//.test(path)) active = "Institute Leadership";
+  if (/board-of-governors|director-general|advisory-council|\/administration\//.test(path)) active = "People";
+  else if (/research\.html|economic-resources-islamic-state|who-owns-the-sky|halal-certification-nigeria/.test(path)) active = "Research";
   else if (/advanced-diplomas|postdoctoral-fellowships|diploma-admission-form/.test(path)) active = "Programs";
   else if (/people|research-contributors|postdoctoral-fellows|administrative-staff|person-profile/.test(path)) active = "People";
   else if (/on-work-2026-01|conferences|news-and-events/.test(path)) active = "News & Events";
@@ -121,14 +122,8 @@ document.querySelectorAll(".nav-inner").forEach((nav) => {
   const item = (label, href) => `<a href="${href}"${active === label ? ' class="active" aria-current="page"' : ""}>${label}</a>`;
   const group = (label, href, children) => `<div class="nav-dropdown">${item(label, href)}<div class="nav-submenu">${children.map(([name, url]) => `<a href="${url}">${name}</a>`).join("")}</div></div>`;
   nav.innerHTML = [
-    item("Home", `${prefix || "./"}`),
     item("About AQIRI", `${prefix || "./"}#about`),
-    group("Institute Leadership", `${prefix || "./"}#administration`, [
-      ["Director General", `${prefix}director-general.html`],
-      ["Board of Governors", `${prefix}board-of-governors.html`],
-      ["Advisory Council", `${prefix}advisory-council.html`]
-    ]),
-    item("Research", `${prefix || "./"}#departments`),
+    item("Research", `${prefix}research.html`),
     item("Publications", "https://publications.aqiri.org"),
     group("Programs", `${prefix}advanced-diplomas.html`, [
       ["Diploma Programs", `${prefix}advanced-diplomas.html`],
@@ -228,7 +223,7 @@ document.querySelectorAll(".nav-inner").forEach((nav) => {
 
 if (!document.querySelector('script[data-site-search]')) {
   const searchScript = document.createElement("script");
-  searchScript.src = `${getPathPrefix()}site-search.js?v=3fc114a749ad`;
+  searchScript.src = `${getPathPrefix()}site-search.js?v=499ba344fccc`;
   searchScript.dataset.siteSearch = "true";
   document.body.append(searchScript);
 }
@@ -467,9 +462,8 @@ matchMedia("(min-width: 1100px)").addEventListener("change", () => {
   document.body.classList.remove("menu-open");
 });
 
-// Preserve the original desktop navigation labels and order.
+// Use the same navigation labels and order on phones and laptops.
 function restoreDesktopNavigation() {
-  const desktop = matchMedia("(min-width: 1100px)").matches;
   document.querySelectorAll(".nav-inner").forEach((nav) => {
     const entries = [...nav.children].filter((node) => !node.classList.contains("nav-search"));
     entries.forEach((entry) => {
@@ -477,12 +471,10 @@ function restoreDesktopNavigation() {
       if (!link) return;
       const label = link.dataset.navigationLabel || link.textContent.trim();
       link.dataset.navigationLabel = label;
-      entry.classList.toggle("nav-mobile-only", ["Home", "Institute Leadership"].includes(label));
-      if (label === "About AQIRI") link.textContent = desktop ? "About" : "About AQIRI";
-      const order = ["Home", "About AQIRI", "Institute Leadership", "Research", "Publications", "Programs", "Library", "News & Events", "People", "Careers", "Contact"];
+      if (label === "About AQIRI") link.textContent = "About";
+      const order = ["About AQIRI", "Research", "Publications", "Programs", "Library", "News & Events", "People", "Careers", "Contact"];
       entry.style.order = order.indexOf(label);
     });
   });
 }
 restoreDesktopNavigation();
-matchMedia("(min-width: 1100px)").addEventListener("change", restoreDesktopNavigation);
